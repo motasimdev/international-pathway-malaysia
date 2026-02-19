@@ -22,7 +22,7 @@ const AppRoutes = createBrowserRouter([
         Component: About,
       },
       {
-        path: "university",
+        path: "universities",
         Component: University,
       },
       {

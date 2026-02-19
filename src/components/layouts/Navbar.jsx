@@ -8,7 +8,7 @@ const Navbar = () => {
       <Container>
         <div className="flex justify-between items-center h-16">
           {/* Logo */}
-          <picture>
+          <picture className="max-w-30">
             <img src={logo} alt="logo" />
           </picture>
           {/* Logo */}
@@ -21,8 +21,8 @@ const Navbar = () => {
                 className={({ isActive }) =>
                   `px-3 py-2 rounded-lg font-medium transition-all duration-200 ${
                     isActive
-                      ? "bg-blue-50 text-blue-700 border-b-2 border-blue-500 shadow-md"
-                      : "text-gray-700 hover:text-blue-600 hover:bg-gray-50"
+                      ? "bg-blue-50 text-[#F21A1F] border-b-2 border-[#F21A1F] shadow-md"
+                      : "text-gray-700 hover:text-[#F21A1F] hover:bg-gray-50"
                   }`
                 }
               >
@@ -32,27 +32,27 @@ const Navbar = () => {
 
             <li>
               <NavLink
-                to="/uk"
+                to="/about"
                 className={({ isActive }) =>
                   `px-3 py-2 rounded-lg font-medium transition-all duration-200 ${
                     isActive
-                      ? "bg-blue-50 text-blue-700 border-b-2 border-blue-500 shadow-md"
-                      : "text-gray-700 hover:text-blue-600 hover:bg-gray-50"
+                      ? "bg-blue-50 text-[#F21A1F] border-b-2 border-[#F21A1F] shadow-md"
+                      : "text-gray-700 hover:text-[#F21A1F] hover:bg-gray-50"
                   }`
                 }
               >
-                UK
+                About Us
               </NavLink>
             </li>
 
             <li>
               <NavLink
-                to="/canada"
+                to="/universities"
                 className={({ isActive }) =>
                   `px-3 py-2 rounded-lg font-medium transition-all duration-200 ${
                     isActive
-                      ? "bg-blue-50 text-blue-700 border-b-2 border-blue-500 shadow-md"
-                      : "text-gray-700 hover:text-blue-600 hover:bg-gray-50"
+                      ? "bg-blue-50 text-[#F21A1F] border-b-2 border-[#F21A1F] shadow-md  "
+                      : "text-gray-700 hover:text-[#F21A1F] hover:bg-gray-50"
                   }`
                 }
               >
@@ -62,16 +62,16 @@ const Navbar = () => {
 
             <li>
               <NavLink
-                to="/services"
+                to="/ourservices"
                 className={({ isActive }) =>
                   `px-3 py-2 rounded-lg font-medium transition-all duration-200 ${
                     isActive
-                      ? "bg-blue-50 text-blue-700 border-b-2 border-blue-500 shadow-md"
-                      : "text-gray-700 hover:text-blue-600 hover:bg-gray-50"
+                      ? "bg-blue-50 text-[#F21A1F] border-b-2 border-[#F21A1F] shadow-md  "
+                      : "text-gray-700 hover:text-[#F21A1F] hover:bg-gray-50"
                   }`
                 }
               >
-                Services
+                Our Services
               </NavLink>
             </li>
 
@@ -81,8 +81,8 @@ const Navbar = () => {
                 className={({ isActive }) =>
                   `px-3 py-2 rounded-lg font-medium transition-all duration-200 ${
                     isActive
-                      ? "bg-blue-50 text-blue-700 border-b-2 border-blue-500 shadow-md"
-                      : "text-gray-700 hover:text-blue-600 hover:bg-gray-50"
+                      ? "bg-blue-50 text-[#F21A1F] border-b-2 border-[#F21A1F] shadow-md  "
+                      : "text-gray-700 hover:text-[#F21A1F] hover:bg-gray-50"
                   }`
                 }
               >
