@@ -18,19 +18,19 @@ const AppRoutes = createBrowserRouter([
         Component: Home,
       },
       {
-        path: "about",
+        path: "about-us",
         Component: About,
       },
       {
-        path: "universities",
+        path: "university",
         Component: University,
       },
       {
-        path: "ourservices",
+        path: "our-services",
         Component: OurServices,
       },
       {
-        path: "blog",
+        path: "blogs",
         Component: Blog,
       },
       {

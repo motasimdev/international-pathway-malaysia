@@ -24,7 +24,7 @@ const Navbar = () => {
       <Container>
         <div className="hidden lg:flex justify-between items-center">
           {/* Logo */}
-          <NavLink to={"/"} className="max-w-30">
+          <NavLink to={"/"} className="max-w-45">
             <picture>
               <img src={logo} alt="logo" />
             </picture>
@@ -51,7 +51,7 @@ const Navbar = () => {
 
               <li>
                 <NavLink
-                  to="/about"
+                  to="/about-us"
                   className={({ isActive }) =>
                     `px-3 py-2 rounded-lg font-medium transition-all duration-200 text-base ${
                       isActive
@@ -66,7 +66,7 @@ const Navbar = () => {
 
               <li>
                 <NavLink
-                  to="/universities"
+                  to="/university"
                   className={({ isActive }) =>
                     `px-3 py-2 rounded-lg font-medium transition-all duration-200 text-base ${
                       isActive
@@ -81,7 +81,7 @@ const Navbar = () => {
 
               <li>
                 <NavLink
-                  to="/ourservices"
+                  to="/our-services"
                   className={({ isActive }) =>
                     `px-3 py-2 rounded-lg font-medium transition-all duration-200 text-base ${
                       isActive
@@ -91,6 +91,21 @@ const Navbar = () => {
                   }
                 >
                   Our Services
+                </NavLink>
+              </li>
+
+              <li>
+                <NavLink
+                  to="/blogs"
+                  className={({ isActive }) =>
+                    `px-3 py-2 rounded-lg font-medium transition-all duration-200 text-base ${
+                      isActive
+                        ? "bg-blue-50 text-primary border-b-2 border-primary shadow-md  "
+                        : "text-secondary hover:text-primary hover:bg-gray-50"
+                    }`
+                  }
+                >
+                  Blog
                 </NavLink>
               </li>
 
@@ -159,7 +174,7 @@ const Navbar = () => {
         <div className="lg:hidden px-3 md:px-5">
           <div className="flex items-center justify-between">
             {/* Logo */}
-            <NavLink to={"/"} className="max-w-20">
+            <NavLink to={"/"} className="max-w-28">
               <picture>
                 <img src={logo} alt="logo" />
               </picture>
@@ -245,7 +260,7 @@ const Navbar = () => {
                 </li>
                 <li>
                   <NavLink
-                    to="/about"
+                    to="/about-us"
                     className={({ isActive }) =>
                       `block px-4 py-3 rounded-lg font-medium transition-all duration-200 ${
                         isActive
@@ -260,7 +275,7 @@ const Navbar = () => {
                 </li>
                 <li>
                   <NavLink
-                    to="/universities"
+                    to="/university"
                     className={({ isActive }) =>
                       `block px-4 py-3 rounded-lg font-medium transition-all duration-200 ${
                         isActive
@@ -275,7 +290,7 @@ const Navbar = () => {
                 </li>
                 <li>
                   <NavLink
-                    to="/ourservices"
+                    to="/our-services"
                     className={({ isActive }) =>
                       `block px-4 py-3 rounded-lg font-medium transition-all duration-200 ${
                         isActive
@@ -286,6 +301,21 @@ const Navbar = () => {
                     onClick={() => setIsMobileMenuOpen(false)}
                   >
                     Our Services
+                  </NavLink>
+                </li>
+                <li>
+                  <NavLink
+                    to="/blogs"
+                    className={({ isActive }) =>
+                      `block px-4 py-3 rounded-lg font-medium transition-all duration-200 ${
+                        isActive
+                          ? "bg-blue-50 text-primary border-b-2 border-primary"
+                          : "text-secondary hover:text-primary hover:bg-gray-50"
+                      }`
+                    }
+                    onClick={() => setIsMobileMenuOpen(false)}
+                  >
+                    Blog
                   </NavLink>
                 </li>
                 <li>
