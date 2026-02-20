@@ -20,7 +20,7 @@ const Navbar = () => {
     setLoginActive(!loginActive);
   };
   return (
-    <nav className="py-2 shadow-sm sticky top-0 z-50">
+    <nav className="py-2 shadow-sm fixed w-full top-0 z-50">
       <Container>
         <div className="hidden lg:flex justify-between items-center">
           {/* Logo */}
