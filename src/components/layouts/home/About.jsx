@@ -7,7 +7,20 @@ import grpStudy from "/src/assets/group-study.jpg";
 import university from "/src/assets/university.jpg";
 import Psm from "../../Psm";
 
+import { render } from "react-dom";
+import CountUp from "react-countup";
+
 const About = () => {
+  //counter up
+  const onComplete = () => {
+    console.log("Completed! 👏");
+  };
+
+  const onStart = () => {
+    console.log("Started! 💨");
+  };
+  //counter up
+
   const universities = [
     { value: "um", label: "University of Malaya (UM)" },
     { value: "utm", label: "Universiti Teknologi Malaysia (UTM)" },
@@ -61,9 +74,17 @@ const About = () => {
                         text={"University"}
                         className={"text-white font-semibold"}
                       />
-                      <p className="text-xl md:text-2xl text-white font-bold">
-                        29 +
-                      </p>
+                      <CountUp
+                        className="account-balance text-xl md:text-2xl text-white font-bold"
+                        start={0}
+                        end={29}
+                        duration={3}
+                        useEasing={true}
+                        separator=","
+                      />{" "}
+                      <span className="text-xl md:text-2xl text-white font-bold">
+                        +
+                      </span>
                     </div>
                   </div>
                   {/* ==============box one======== */}
@@ -118,9 +139,17 @@ const About = () => {
                         text={"Student visa"}
                         className={"text-white font-semibold"}
                       />
-                      <p className="text-xl md:text-2xl text-white font-bold">
-                        200 +
-                      </p>
+                      <CountUp
+                        className="account-balance text-xl md:text-2xl text-white font-bold"
+                        start={0}
+                        end={200}
+                        duration={3}
+                        useEasing={true}
+                        separator=","
+                      />{" "}
+                      <span className="text-xl md:text-2xl text-white font-bold">
+                        +
+                      </span>
                     </div>
                   </div>
                 </div>
