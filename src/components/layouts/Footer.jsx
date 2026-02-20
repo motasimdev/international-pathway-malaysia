@@ -11,7 +11,7 @@ import Psm from "../Psm";
 const Footer = () => {
   return (
     <>
-      <footer className="pt-10 lg:pt-20">
+      <footer className="pt-10 lg:pt-17">
         <Container>
           <div className="">
             {/* Logo */}
@@ -20,7 +20,7 @@ const Footer = () => {
                 <img
                   src={logo}
                   alt="logo"
-                  className="w-30 lg:w-45 justify-self-center"
+                  className="w-30 lg:w-35 justify-self-center"
                 />
               </picture>
             </NavLink>
