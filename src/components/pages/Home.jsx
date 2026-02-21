@@ -1,9 +1,11 @@
 import React from 'react'
-import About from '../layouts/home/Banner'
+import Banner from '../layouts/home/Banner'
+import About from '../layouts/home/About'
 
 const Home = () => {
   return (
     <>
+    <Banner/>
     <About/>
     </>
   )

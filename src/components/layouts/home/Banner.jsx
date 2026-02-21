@@ -156,7 +156,7 @@ const Banner = () => {
                     </div>
                     <div className="ml-5">
                       <PBase
-                        text={"Student visa"}
+                        text={"Student helped"}
                         className={"text-white font-semibold"}
                       />
                       <CountUp
