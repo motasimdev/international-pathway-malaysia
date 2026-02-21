@@ -17,7 +17,7 @@ import Psm from "../../Psm";
 import Marquee from "react-fast-marquee";
 import CountUp from "react-countup";
 
-const About = () => {
+const Banner = () => {
   //counter up
   const onComplete = () => {
     console.log("Completed");
@@ -195,4 +195,4 @@ const About = () => {
   );
 };
 
-export default About;
+export default Banner;

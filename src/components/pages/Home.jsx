@@ -1,5 +1,5 @@
 import React from 'react'
-import About from '../layouts/home/About'
+import About from '../layouts/home/Banner'
 
 const Home = () => {
   return (
