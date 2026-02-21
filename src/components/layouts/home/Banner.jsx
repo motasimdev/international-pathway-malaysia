@@ -52,13 +52,13 @@ const Banner = () => {
   ];
   return (
     <>
-      <section className="bg-linear-to-b from-[#d5d5ff] to-[#e6e6ec] pt-30 pb-5 md:pb-20 lg:pt-40 lg:pb-30 px-3 md:px-5 lg:px-0">
+      <section className="bg-linear-to-b from-[#d5d5ff] to-[#e6e6ec] pt-30 pb-5 md:pb-20 lg:pt-40 lg:pb-30">
         <Container>
           <div className="md:flex justify-between items-center md:gap-x-8 lg:gap-x-0">
             <div className="md:w-[50%]">
               <h1 className="text-4xl md:text-[40px] lg:text-[54px] lg:leading-16 lg:pr-23 text-secondary font-extrabold ">
                 Expert Guidance For{" "}
-                <span className="text-primary">International Students</span> In
+                <span className="text-primary">International Students</span> In 
                 Malaysia
               </h1>
               <p className="text-[22px] text-secondary lg:pr-26 pt-5 pb-3 lg:text-justify">
