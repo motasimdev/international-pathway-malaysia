@@ -5,10 +5,16 @@ import { RiGraduationCapFill } from "react-icons/ri";
 import PBase from "../../PBase";
 import grpStudy from "/src/assets/group-study.jpg";
 import university from "/src/assets/university.jpg";
+import APU from "/src/assets/university-logos/APU-logo.png";
+import INTI from "/src/assets/university-logos/INTI-40.png";
+import NILAI from "/src/assets/university-logos/logo.png";
+import LINCOLN from "/src/assets/university-logos/logo.webp";
+import UNIRAZAK from "/src/assets/university-logos/Official-UNIRAZAK-Logo.png";
+import SEGI from "/src/assets/university-logos/SEGi-University.png";
+import UOW from "/src/assets/university-logos/UOW-logoo.png";
 import Psm from "../../Psm";
 
 import Marquee from "react-fast-marquee";
-
 import CountUp from "react-countup";
 
 const About = () => {
@@ -36,16 +42,13 @@ const About = () => {
   ];
 
   const university_logo = [
-    { name: "APU", logo: "/src/assets/university-logos/APU-logo.png" },
-    { name: "INTI", logo: "/src/assets/university-logos/INTI-40.png" },
-    { name: "NILAI", logo: "/src/assets/university-logos/logo.png" },
-    { name: "LINCOLN", logo: "/src/assets/university-logos/logo.webp" },
-    {
-      name: "UNIRAZAK",
-      logo: "/src/assets/university-logos/Official-UNIRAZAK-Logo.png",
-    },
-    { name: "SEGI", logo: "/src/assets/university-logos/SEGi-University.png",  boost: true },
-    { name: "UOW", logo: "/src/assets/university-logos/UOW-logoo.png" },
+    { name: "APU", logo: APU },
+    { name: "INTI", logo: INTI },
+    { name: "NILAI", logo: NILAI },
+    { name: "LINCOLN", logo: LINCOLN },
+    { name: "UNIRAZAK", logo: UNIRAZAK },
+    { name: "SEGI", logo: SEGI },
+    { name: "UOW", logo: UOW },
   ];
   return (
     <>
