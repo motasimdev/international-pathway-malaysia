@@ -7,17 +7,18 @@ import grpStudy from "/src/assets/group-study.jpg";
 import university from "/src/assets/university.jpg";
 import Psm from "../../Psm";
 
-import { render } from "react-dom";
+import Marquee from "react-fast-marquee";
+
 import CountUp from "react-countup";
 
 const About = () => {
   //counter up
   const onComplete = () => {
-    console.log("Completed! 👏");
+    console.log("Completed");
   };
 
   const onStart = () => {
-    console.log("Started! 💨");
+    console.log("Started");
   };
   //counter up
 
@@ -33,9 +34,22 @@ const About = () => {
     { value: "sunway", label: "Sunway University" },
     { value: "apu", label: "Asia Pacific University (APU)" },
   ];
+
+  const university_logo = [
+    { name: "APU", logo: "/src/assets/university-logos/APU-logo.png" },
+    { name: "INTI", logo: "/src/assets/university-logos/INTI-40.png" },
+    { name: "NILAI", logo: "/src/assets/university-logos/logo.png" },
+    { name: "LINCOLN", logo: "/src/assets/university-logos/logo.webp" },
+    {
+      name: "UNIRAZAK",
+      logo: "/src/assets/university-logos/Official-UNIRAZAK-Logo.png",
+    },
+    { name: "SEGI", logo: "/src/assets/university-logos/SEGi-University.png" },
+    { name: "UOW", logo: "/src/assets/university-logos/UOW-logo.png" },
+  ];
   return (
     <>
-      <section className="bg-linear-to-b from-[#d5d5ff] to-[#e6e6ec] py-30 lg:pt-55 lg:pb-40 px-3 md:px-5 lg:px-0">
+      <section className="bg-linear-to-b from-[#d5d5ff] to-[#e6e6ec] py-30 lg:pt-55 lg:pb-30 px-3 md:px-5 lg:px-0">
         <Container>
           <div className="md:flex justify-between items-center md:gap-x-8 lg:gap-x-0">
             <div className="md:w-[50%]">
@@ -48,10 +62,7 @@ const About = () => {
                 We simplify everything, from selecting the perfect university to
                 obtaining your student visa.
               </p>
-              <div className="max-w-135 flex items-center bg-secondary">
-                <p className="text-lg lg:text-[22px] leading-6 text-white">
-                  Our Partner Universities
-                </p>
+              <div className="max-w-135 flex items-center z-10">
                 <div className="w-full">
                   <Select
                     options={universities}
@@ -60,6 +71,7 @@ const About = () => {
                     placeholder="Search university"
                     onChange={(selected) => console.log(selected.value)}
                     isSearchable
+                    maxMenuHeight="160px"
                   />
                 </div>
               </div>
@@ -163,6 +175,19 @@ const About = () => {
           </div>
         </Container>
       </section>
+      <div className="bg-[#e5e0d0] py-6">
+        <Marquee speed={80} gradient={false} pauseOnHover={true}>
+          {university_logo.map((uni, index) => (
+            <div key={index} className="mx-10 flex items-center justify-center">
+              <img
+                src={uni.logo}
+                alt={uni.name}
+                className="h-12 object-contain"
+              />
+            </div>
+          ))}
+        </Marquee>
+      </div>
     </>
   );
 };
