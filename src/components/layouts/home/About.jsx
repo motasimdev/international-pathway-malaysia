@@ -52,7 +52,7 @@ const About = () => {
   ];
   return (
     <>
-      <section className="bg-linear-to-b from-[#d5d5ff] to-[#e6e6ec] py-30 lg:pt-55 lg:pb-30 px-3 md:px-5 lg:px-0">
+      <section className="bg-linear-to-b from-[#d5d5ff] to-[#e6e6ec] pt-30 pb-5 md:pb-20 lg:pt-55 lg:pb-30 px-3 md:px-5 lg:px-0">
         <Container>
           <div className="md:flex justify-between items-center md:gap-x-8 lg:gap-x-0">
             <div className="md:w-[50%]">
@@ -178,7 +178,7 @@ const About = () => {
           </div>
         </Container>
       </section>
-      <div className="bg-[#e5e0d0] py-6">
+      <div className="bg-[#e5e0d0] py-2 lg:py-6">
         <Marquee speed={80} gradient={false} pauseOnHover={true}>
           {university_logo.map((uni, index) => (
             <div key={index} className="mx-10 flex items-center justify-center">
