@@ -44,8 +44,8 @@ const About = () => {
       name: "UNIRAZAK",
       logo: "/src/assets/university-logos/Official-UNIRAZAK-Logo.png",
     },
-    { name: "SEGI", logo: "/src/assets/university-logos/SEGi-University.png" },
-    { name: "UOW", logo: "/src/assets/university-logos/UOW-logo.png" },
+    { name: "SEGI", logo: "/src/assets/university-logos/SEGi-University.png",  boost: true },
+    { name: "UOW", logo: "/src/assets/university-logos/UOW-logoo.png" },
   ];
   return (
     <>
@@ -182,7 +182,7 @@ const About = () => {
               <img
                 src={uni.logo}
                 alt={uni.name}
-                className="h-12 object-contain"
+                className={`h-12 object-contain`}
               />
             </div>
           ))}
