@@ -20,7 +20,7 @@ const Navbar = () => {
     setLoginActive(!loginActive);
   };
   return (
-    <nav className="py-3 shadow-sm fixed w-full top-0 z-50">
+    <nav className="lg:py-3 shadow-sm fixed w-full top-0 z-50">
       <Container>
         <div className="hidden lg:flex justify-between items-center">
           {/* Logo */}
@@ -169,180 +169,176 @@ const Navbar = () => {
             {/* ========  login btn ====== */}
           </div>
         </div>
+      </Container>
+      {/* =============Mobile Menu============= */}
+      <div className="lg:hidden py-2 px-3 md:px-5 bg-[#d5d5ff]">
+        <div className="flex items-center justify-between">
+          {/* Logo */}
+          <NavLink to={"/"} className="max-w-25">
+            <picture>
+              <img src={logo} alt="logo" />
+            </picture>
+          </NavLink>
+          {/* Logo */}
 
-        {/* =============Mobile Menu============= */}
-        <div className="lg:hidden px-3 md:px-5">
-          <div className="flex items-center justify-between">
-            {/* Logo */}
-            <NavLink to={"/"} className="max-w-25">
-              <picture>
-                <img src={logo} alt="logo" />
-              </picture>
-            </NavLink>
-            {/* Logo */}
-
-            <div className="flex items-center gap-x-3">
-              {/* Mobile Login Button */}
-              <div className="relative">
-                <div
-                  className={`${
-                    loginActive
-                      ? "border border-secondary bg-secondary shadow-lg"
-                      : "bg-transparent"
-                  } 
+          <div className="flex items-center gap-x-3 ">
+            {/* Mobile Login Button */}
+            <div className="relative">
+              <div
+                className={`${
+                  loginActive
+                    ? "border border-secondary bg-secondary shadow-lg"
+                    : "bg-transparent"
+                } 
                   group hover:bg-secondary transition-all duration-300 flex items-center border border-secondary py-0.5 pl-1 pr-2 rounded-full cursor-pointer w-full justify-center`}
-                  onClick={toggelActive}
-                >
-                  <FaRegCircleUser
+                onClick={toggelActive}
+              >
+                <FaRegCircleUser
+                  className={`${
+                    loginActive ? "text-white" : "text-secondary"
+                  } text-[21px] mr-1 group-hover:text-white transition duration-300`}
+                />
+                <div className="flex items-baseline">
+                  <PBase
+                    text="Login"
                     className={`${
                       loginActive ? "text-white" : "text-secondary"
-                    } text-[21px] mr-1 group-hover:text-white transition duration-300`}
+                    } font-medium group-hover:text-white transition duration-300`}
                   />
-                  <div className="flex items-baseline">
-                    <PBase
-                      text="Login"
-                      className={`${
-                        loginActive ? "text-white" : "text-secondary"
-                      } font-medium group-hover:text-white transition duration-300`}
-                    />
-                    <FaSortDown
-                      className={`${loginActive ? "text-white" : "text-secondary"}
+                  <FaSortDown
+                    className={`${loginActive ? "text-white" : "text-secondary"}
                   text-secondary text-sm group-hover:text-white transition duration-300
                   `}
-                    />
+                  />
+                </div>
+              </div>
+
+              {/* Mobile Dropdown */}
+              {loginActive && (
+                <div className="absolute top-6.5 right-0 bg-secondary/50 backdrop-blur-sm rounded-lg border shadow-xl py-2">
+                  <div className="flex items-center gap-x-4 hover:bg-gray-100/30 text-white py-1 px-5 cursor-pointer transition-all duration-200">
+                    <FaUserGraduate className="text-sm md:text-md" />
+                    <PBase text="Student" className="text-white font-medium" />
+                  </div>
+                  <div className="flex items-center gap-x-4 hover:bg-gray-100/30 text-white py-1 px-5 cursor-pointer transition-all duration-200">
+                    <FaUserTie className="text-sm md:text-md" />
+                    <PBase text="Agent" className="text-white font-medium" />
                   </div>
                 </div>
-
-                {/* Mobile Dropdown */}
-                {loginActive && (
-                  <div className="absolute top-6.5 right-0 bg-secondary/50 backdrop-blur-sm rounded-lg border shadow-xl py-2">
-                    <div className="flex items-center gap-x-4 hover:bg-gray-100/30 text-white py-1 px-5 cursor-pointer transition-all duration-200">
-                      <FaUserGraduate className="text-sm md:text-md" />
-                      <PBase
-                        text="Student"
-                        className="text-white font-medium"
-                      />
-                    </div>
-                    <div className="flex items-center gap-x-4 hover:bg-gray-100/30 text-white py-1 px-5 cursor-pointer transition-all duration-200">
-                      <FaUserTie className="text-sm md:text-md" />
-                      <PBase text="Agent" className="text-white font-medium" />
-                    </div>
-                  </div>
-                )}
-              </div>
-              {/* Mobile menu button */}
-              <button
-                className="lg:hidden "
-                onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-              >
-                {isMobileMenuOpen ? (
-                  <FaXmark className="text-4xl text-secondary" />
-                ) : (
-                  <HiBars3 className="text-4xl text-primary" />
-                )}
-              </button>
+              )}
             </div>
+            {/* Mobile menu button */}
+            <button
+              className="lg:hidden "
+              onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+            >
+              {isMobileMenuOpen ? (
+                <FaXmark className="text-4xl text-secondary" />
+              ) : (
+                <HiBars3 className="text-4xl text-primary" />
+              )}
+            </button>
           </div>
-
-          {/* Mobile Menu - Dropdown */}
-          {isMobileMenuOpen && (
-            <div className="pb-4 border-t border-gray-200">
-              <ul className="flex flex-col pt-2 text-center">
-                <li>
-                  <NavLink
-                    to="/"
-                    className={({ isActive }) =>
-                      `block px-4 py-3 rounded-lg font-medium transition-all duration-200 ${
-                        isActive
-                          ? "bg-blue-50 text-primary border-b-2 border-primary"
-                          : "text-secondary hover:text-primary hover:bg-gray-50"
-                      }`
-                    }
-                    onClick={() => setIsMobileMenuOpen(false)}
-                  >
-                    Home
-                  </NavLink>
-                </li>
-                <li>
-                  <NavLink
-                    to="/about-us"
-                    className={({ isActive }) =>
-                      `block px-4 py-3 rounded-lg font-medium transition-all duration-200 ${
-                        isActive
-                          ? "bg-blue-50 text-primary border-b-2 border-primary"
-                          : "text-secondary hover:text-primary hover:bg-gray-50"
-                      }`
-                    }
-                    onClick={() => setIsMobileMenuOpen(false)}
-                  >
-                    About Us
-                  </NavLink>
-                </li>
-                <li>
-                  <NavLink
-                    to="/university"
-                    className={({ isActive }) =>
-                      `block px-4 py-3 rounded-lg font-medium transition-all duration-200 ${
-                        isActive
-                          ? "bg-blue-50 text-primary border-b-2 border-primary"
-                          : "text-secondary hover:text-primary hover:bg-gray-50"
-                      }`
-                    }
-                    onClick={() => setIsMobileMenuOpen(false)}
-                  >
-                    Universities
-                  </NavLink>
-                </li>
-                <li>
-                  <NavLink
-                    to="/our-services"
-                    className={({ isActive }) =>
-                      `block px-4 py-3 rounded-lg font-medium transition-all duration-200 ${
-                        isActive
-                          ? "bg-blue-50 text-primary border-b-2 border-primary"
-                          : "text-secondary hover:text-primary hover:bg-gray-50"
-                      }`
-                    }
-                    onClick={() => setIsMobileMenuOpen(false)}
-                  >
-                    Our Services
-                  </NavLink>
-                </li>
-                <li>
-                  <NavLink
-                    to="/blogs"
-                    className={({ isActive }) =>
-                      `block px-4 py-3 rounded-lg font-medium transition-all duration-200 ${
-                        isActive
-                          ? "bg-blue-50 text-primary border-b-2 border-primary"
-                          : "text-secondary hover:text-primary hover:bg-gray-50"
-                      }`
-                    }
-                    onClick={() => setIsMobileMenuOpen(false)}
-                  >
-                    Blog
-                  </NavLink>
-                </li>
-                <li>
-                  <NavLink
-                    to="/contact"
-                    className={({ isActive }) =>
-                      `block px-4 py-3 rounded-lg font-medium transition-all duration-200 ${
-                        isActive
-                          ? "bg-blue-50 text-primary border-b-2 border-primary"
-                          : "text-secondary hover:text-primary hover:bg-gray-50"
-                      }`
-                    }
-                    onClick={() => setIsMobileMenuOpen(false)}
-                  >
-                    Contact
-                  </NavLink>
-                </li>
-              </ul>
-            </div>
-          )}
         </div>
-      </Container>
+
+        {/* Mobile Menu - Dropdown */}
+        {isMobileMenuOpen && (
+          <div className="pb-4 border-t border-gray-200">
+            <ul className="flex flex-col pt-2 text-center">
+              <li>
+                <NavLink
+                  to="/"
+                  className={({ isActive }) =>
+                    `block px-4 py-3 rounded-lg font-medium transition-all duration-200 ${
+                      isActive
+                        ? "bg-blue-50 text-primary border-b-2 border-primary"
+                        : "text-secondary hover:text-primary hover:bg-gray-50"
+                    }`
+                  }
+                  onClick={() => setIsMobileMenuOpen(false)}
+                >
+                  Home
+                </NavLink>
+              </li>
+              <li>
+                <NavLink
+                  to="/about-us"
+                  className={({ isActive }) =>
+                    `block px-4 py-3 rounded-lg font-medium transition-all duration-200 ${
+                      isActive
+                        ? "bg-blue-50 text-primary border-b-2 border-primary"
+                        : "text-secondary hover:text-primary hover:bg-gray-50"
+                    }`
+                  }
+                  onClick={() => setIsMobileMenuOpen(false)}
+                >
+                  About Us
+                </NavLink>
+              </li>
+              <li>
+                <NavLink
+                  to="/university"
+                  className={({ isActive }) =>
+                    `block px-4 py-3 rounded-lg font-medium transition-all duration-200 ${
+                      isActive
+                        ? "bg-blue-50 text-primary border-b-2 border-primary"
+                        : "text-secondary hover:text-primary hover:bg-gray-50"
+                    }`
+                  }
+                  onClick={() => setIsMobileMenuOpen(false)}
+                >
+                  Universities
+                </NavLink>
+              </li>
+              <li>
+                <NavLink
+                  to="/our-services"
+                  className={({ isActive }) =>
+                    `block px-4 py-3 rounded-lg font-medium transition-all duration-200 ${
+                      isActive
+                        ? "bg-blue-50 text-primary border-b-2 border-primary"
+                        : "text-secondary hover:text-primary hover:bg-gray-50"
+                    }`
+                  }
+                  onClick={() => setIsMobileMenuOpen(false)}
+                >
+                  Our Services
+                </NavLink>
+              </li>
+              <li>
+                <NavLink
+                  to="/blogs"
+                  className={({ isActive }) =>
+                    `block px-4 py-3 rounded-lg font-medium transition-all duration-200 ${
+                      isActive
+                        ? "bg-blue-50 text-primary border-b-2 border-primary"
+                        : "text-secondary hover:text-primary hover:bg-gray-50"
+                    }`
+                  }
+                  onClick={() => setIsMobileMenuOpen(false)}
+                >
+                  Blog
+                </NavLink>
+              </li>
+              <li>
+                <NavLink
+                  to="/contact"
+                  className={({ isActive }) =>
+                    `block px-4 py-3 rounded-lg font-medium transition-all duration-200 ${
+                      isActive
+                        ? "bg-blue-50 text-primary border-b-2 border-primary"
+                        : "text-secondary hover:text-primary hover:bg-gray-50"
+                    }`
+                  }
+                  onClick={() => setIsMobileMenuOpen(false)}
+                >
+                  Contact
+                </NavLink>
+              </li>
+            </ul>
+          </div>
+        )}
+      </div>
     </nav>
   );
 };
