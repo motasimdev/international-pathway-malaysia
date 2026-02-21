@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import Container from "../Container";
 import { NavLink } from "react-router";
 import logo from "/src/assets/logo.jpeg";
@@ -13,14 +13,28 @@ import PBase from "../PBase";
 import { HiBars3 } from "react-icons/hi2";
 
 const Navbar = () => {
+  const [isScrolled, setIsScrolled] = useState(false);
   const [login, setLogin] = useState(false);
   const [loginActive, setLoginActive] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const toggelActive = () => {
     setLoginActive(!loginActive);
   };
+
+  //scroll behave
+  useEffect(() => {
+    const handleScroll = () => {
+      setIsScrolled(window.scrollY > 50);
+    };
+    window.addEventListener("scroll", handleScroll);
+    return ()=> window.removeEventListener("scroll", handleScroll);
+  }, []);
+  //scroll behave
+
   return (
-    <nav className="lg:py-3 shadow-sm fixed w-full top-0 z-50 bg-[#d5d5ff]">
+    <nav
+      className={`lg:py-3 shadow-sm fixed w-full top-0 z-50 ${isScrolled ? "bg-white" : "bg-transparent"}`}
+    >
       <Container>
         <div className="hidden lg:flex justify-between items-center">
           {/* Logo */}
