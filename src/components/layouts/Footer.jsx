@@ -15,13 +15,9 @@ const Footer = () => {
         <Container>
           <div className="">
             {/* Logo */}
-            <NavLink to={"/"}>
+            <NavLink to={"/"} className={"flex justify-center"}>
               <picture>
-                <img
-                  src={logo}
-                  alt="logo"
-                  className="w-30 lg:w-35 justify-self-center"
-                />
+                <img src={logo} alt="logo" className="w-30 lg:w-35" />
               </picture>
             </NavLink>
             {/* Logo */}
@@ -119,7 +115,12 @@ const Footer = () => {
         </Container>
         <div className="py-3 bg-secondary w-full text-center">
           <Psm text={""} />
-          <Psm text={" ©2026 All Rights Reserved By International Pathway Malaysia"} className={'text-white'}/>
+          <Psm
+            text={
+              " ©2026 All Rights Reserved By International Pathway Malaysia"
+            }
+            className={"text-white"}
+          />
         </div>
       </footer>
     </>
