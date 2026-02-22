@@ -12,6 +12,7 @@ import LINCOLN from "/src/assets/university-logos/logo.webp";
 import UNIRAZAK from "/src/assets/university-logos/Official-UNIRAZAK-Logo.png";
 import SEGI from "/src/assets/university-logos/SEGi-University.png";
 import UOW from "/src/assets/university-logos/UOW-logoo.png";
+import video from "/src/assets/video/home-video-gus.mp4";
 import Psm from "../../Psm";
 
 import Marquee from "react-fast-marquee";
@@ -52,13 +53,24 @@ const Banner = () => {
   ];
   return (
     <>
-      <section className="bg-linear-to-b from-[#d5d5ff] to-[#e6e6ec] pt-30 pb-5 md:pb-20 lg:pt-40 lg:pb-30">
+      <section className="relative bg-linear-to-b from-[#d5d5ff] to-[#e6e6ec] pt-30 pb-5 md:pb-20 lg:pt-40 lg:pb-30">
+        {/* =======video======== */}
+        {/* <video
+          className="absolute inset-0 w-full h-full object-cover"
+          src="/src/assets/video/home-video-gus.mp4"
+          autoPlay
+          loop
+          muted
+          playsInline
+        /> */}
+        {/* <div className="absolute inset-0 bg-black/50"></div> */}
+        {/* =======video======== */}
         <Container>
-          <div className="md:flex justify-between items-center md:gap-x-8 lg:gap-x-0">
+          <div className="relative md:flex justify-between items-center md:gap-x-8 lg:gap-x-0">
             <div className="md:w-[50%]">
               <h1 className="text-4xl md:text-[40px] lg:text-[54px] lg:leading-16 lg:pr-23 text-secondary font-extrabold ">
                 Expert Guidance For{" "}
-                <span className="text-primary">International Students</span> In 
+                <span className="text-primary">International Students</span> In
                 Malaysia
               </h1>
               <p className="text-[22px] text-secondary lg:pr-26 pt-5 pb-3 lg:text-justify">

@@ -23,9 +23,9 @@ const About = () => {
               <PBase
                 text={
                   "Empowering your future with the world’s most trusted higher education specialist"
-                }
+                } 
                 className={
-                  "pt-3 lg:pt-5 text-blue-500 font-medium lg:pr-30 text-center md:text-left"
+                  "pt-3 lg:pt-5 text-primary font-medium lg:pr-30 text-center md:text-left"
                 }
               />
               <P18

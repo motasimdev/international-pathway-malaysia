@@ -27,13 +27,13 @@ const Navbar = () => {
       setIsScrolled(window.scrollY > 50);
     };
     window.addEventListener("scroll", handleScroll);
-    return ()=> window.removeEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
   }, []);
   //scroll behave
 
   return (
     <nav
-      className={`lg:py-3 shadow-sm fixed w-full top-0 z-50 ${isScrolled ? "bg-white" : "bg-transparent"}`}
+      className={`lg:py-3 shadow-sm fixed w-full top-0 z-1000 ${isScrolled ? "bg-white" : "bg-transparent"}`}
     >
       <Container>
         <div className="hidden lg:flex justify-between items-center">
@@ -185,7 +185,9 @@ const Navbar = () => {
         </div>
       </Container>
       {/* =============Mobile Menu============= */}
-      <div className="lg:hidden py-2 px-3 md:px-5 bg-[#d5d5ff]">
+      <nav
+        className={`lg:hidden py-2 px-3 md:px-5 bg-[#d5d5ff]`}
+      >
         <div className="flex items-center justify-between">
           {/* Logo */}
           <NavLink to={"/"} className="max-w-25">
@@ -352,7 +354,7 @@ const Navbar = () => {
             </ul>
           </div>
         )}
-      </div>
+      </nav>
     </nav>
   );
 };
