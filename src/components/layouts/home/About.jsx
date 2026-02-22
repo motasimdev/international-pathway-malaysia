@@ -8,7 +8,7 @@ import Button from "../../Button";
 const About = () => {
   return (
     <>
-      <section className="pt-15 md:pt-30 pb-5 md:pb-20 lg:pt-20 lg:pb-20">
+      <section className="pt-18 md:pt-30 pb-18 md:pb-20 lg:py-30">
         <Container>
           <div className="md:flex justify-between items-center">
             <div className="md:w-[50%] pb-3 md:pb-0">
@@ -17,7 +17,7 @@ const About = () => {
               </picture>
             </div>
             <div className="md:w-[45%]">
-              <h3 className="text-secondary text-[32px] md:text-4xl leading-8 lg:leading-11 font-bold lg:pr-30 text-center md:text-left">
+              <h3 className="text-secondary text-[32px] md:text-4xl leading-8 lg:leading-11 font-bold lg:pr-30 text-center md:text-left py-3 md:py-0">
                 The Trusted Partner for Your Study Abroad Success
               </h3>
               <PBase
