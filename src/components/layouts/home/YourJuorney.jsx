@@ -19,8 +19,8 @@ const YourJuorney = () => {
             We’ve helped 50,000+ international students get into university.
           </p>
           {/* ========================== */}
-          <div className="relative mt-8 overflow-hidden pb-70 lg:pb-30">
-            <div className="absolute lg:-top-37 lg:left-116 py-47 md:py-53 rounded-full lg:rounded-none lg:py-135 px-8.5 lg:px-29.5 lg:-rotate-60 bg-linear-to-b from-[#d5d5ff7a] to-[#d5d5ff] z-0"></div>
+          <div className="relative mt-8 overflow-hidden pb-60 md:pb-30">
+            <div className="absolute lg:-top-37 lg:left-116 rounded-full lg:rounded-none py-47 md:py-70 lg:py-135 px-8.5 md:px-20 lg:px-29.5 lg:-rotate-60 bg-linear-to-b from-[#d5d5ff7a] to-[#d5d5ff] z-0"></div>
             <div className="relative w-17 h-17 md:w-40 md:h-40 lg:w-60 lg:h-60 rounded-full bg-yellow-100 z-10">
               <div className="w-full h-full rounded-full overflow-hidden">
                 <img
@@ -30,7 +30,7 @@ const YourJuorney = () => {
                 />
               </div>
             </div>
-            <div className="z-10 max-w-120 absolute top-0 left-20 lg:left-90">
+            <div className="z-10 max-w-120 absolute top-0 left-20 md:left-50 lg:left-90">
               <p className="text-2xl lg:text-[32px] font-semibold text-white">Step 1</p>
               <h3 className="text-4xl md:text-5xl lg:text-6xl text-primary font-extrabold pr-5">
                 Choose your pathway
@@ -44,7 +44,7 @@ const YourJuorney = () => {
               <Button className={"bg-blue-200! lg:bg-secondary"}>Our Programmes</Button>
             </div>
             <div className="relative my-60 lg:my-78 flex lg:justify-end">
-              <div className="z-10 max-w-120 absolute top-0 left-20 lg:left-0">
+              <div className="z-10 max-w-120 absolute top-0 left-20 md:left-50 lg:left-0">
                 <p className="text-2xl lg:text-[32px] font-semibold text-white">
                   Step 2
                 </p>
@@ -67,7 +67,7 @@ const YourJuorney = () => {
             </div>
             {/* ================================= */}
             <div className="relative">
-              <div className="absolute bottom-0 lg:-bottom-34 lg:left-121 rounded-full lg:rounded-none py-47 md:py-53 lg:py-134 px-8.5 lg:px-29.5 lg:rotate-60 bg-linear-to-b from-[#d5d5ff7a] to-[#d5d5ff] z-0"></div>
+              <div className="absolute bottom-0 lg:-bottom-34 lg:left-121 rounded-full lg:rounded-none py-47 md:py-70 lg:py-134 px-8.5 md:px-20 lg:px-29.5 lg:rotate-60 bg-linear-to-b from-[#d5d5ff7a] to-[#d5d5ff] z-0"></div>
               <div className="relative w-17 h-17 md:w-40 md:h-40 lg:w-60 lg:h-60 rounded-full bg-yellow-100 z-10">
                 <div className="w-full h-full rounded-full overflow-hidden">
                   <img
@@ -77,7 +77,7 @@ const YourJuorney = () => {
                   />
                 </div>
               </div>
-              <div className="z-10 max-w-121 absolute top-0 left-20 lg:left-90 ">
+              <div className="z-10 max-w-121 absolute top-0 left-20 md:left-50 lg:left-90 ">
                 <p className="text-2xl lg:text-[32px] font-semibold text-white">
                   Step 3
                 </p>
