@@ -3,7 +3,6 @@ import Container from "../../Container";
 import journeyOne from "/src/assets/your-journey01.svg";
 import journeyTwo from "/src/assets/your-journey02.svg";
 import journeyThree from "/src/assets/your-journey03.svg";
-import PBase from "../../PBase";
 import Button from "../../Button";
 import P18 from "../../P18";
 
