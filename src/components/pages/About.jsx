@@ -1,8 +1,11 @@
 import React from 'react'
+import AboutHeader from '../layouts/aboutUs/AboutHeader'
 
 const About = () => {
   return (
-    <div>About</div>
+    <>
+    <AboutHeader/>  
+    </>
   )
 }
 

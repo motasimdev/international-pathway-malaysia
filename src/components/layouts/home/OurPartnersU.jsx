@@ -19,6 +19,7 @@ import slideNine from "/src/assets/wollongong-university.jpg";
 import { Link } from "react-router";
 import { FaAnglesRight, FaAnglesLeft } from "react-icons/fa6";
 import CardPartnerU from "../../CardPartnerU";
+import Heading from "../../Heading";
 
 const OurPartnersU = () => {
   return (
@@ -26,9 +27,7 @@ const OurPartnersU = () => {
       <section className="py-11 lg:py-20">
         <Container>
           <div className="text-center pb-9">
-            <h3 className="text-3xl lg:text-[40px] font-semibold bg-secondary inline text-white">
-              Our Partners
-            </h3>
+            <Heading text={"Our Partners"} className={"bg-secondary inline text-white"}/>
           </div>
           <div className="w-full overflow-visible relative">
             <Swiper
