@@ -12,10 +12,10 @@ import aboutFour from '/src/assets/aboutFour.svg'
 const AboutHeader = () => {
   return (
     <>
-      <section className="pt-30 pb-5 md:pb-20 lg:pt-30 lg:pb-30">
+      <section className="pt-20 md:pt-25 pb-5 md:pb-20 lg:pt-30 lg:pb-15">
         <Container>
           <div className="text-center">
-            <div className="flex items-center gap-x-2 justify-center">
+            <div className="md:flex items-center gap-x-2 justify-center">
               <Heading text={"About Our"} className={"text-secondary"} />
               <Heading
                 text={"International Pathway Malaysia"}
@@ -26,7 +26,7 @@ const AboutHeader = () => {
               text={
                 "At International Pathway Malaysia, we're passionate about empowering students to unlock their academic potential. As a leading student consultancy firm, we guide students worldwide towards achieving their educational aspirations - both in Malaysia..."
               }
-              className={"py-5"}
+              className={"py-5 text-justify md:text-center"}
             />
             <Link to={""}>
               <Button>Learn More</Button>
@@ -34,17 +34,17 @@ const AboutHeader = () => {
           </div>
 
           {/* ===================================== */}
-          <div className="flex justify-between items-baseline">
-            <div className="w-[25%] rounded-2xl bg-amber-100">
-                <img src={aboutOne} alt="" className="w-full h-full object-cover"/>
-            </div>
-            <div className="w-[23%] rounded-2xl h-50 bg-amber-100">
+          <div className="flex justify-between items-baseline mt-5 md:mt-9 lg:mt-0">
+            <div className="w-[25%] h-27 md:h-auto rounded-2xl bg-amber-100">
                 <img src={aboutThree} alt="" className="w-full h-full object-cover"/>
             </div>
-            <div className="w-[23%] rounded-2xl h-60 bg-amber-100">
+            <div className="w-[23%] rounded-2xl md:h-43 lg:h-50 bg-amber-100">
+                <img src={aboutOne} alt="" className="w-full h-full object-cover"/>
+            </div>
+            <div className="w-[23%] rounded-2xl h-23 md:h-52 lg:h-60 bg-amber-100">
                 <img src={aboutFour} alt="" className="w-full h-full object-cover"/>
             </div>
-            <div className="w-[25%] rounded-2xl bg-amber-100">
+            <div className="w-[25%] h-27 md:h-auto rounded-2xl bg-amber-100">
                 <img src={aboutTwo} alt="" className="w-full h-full object-cover"/>
             </div>
           </div>
