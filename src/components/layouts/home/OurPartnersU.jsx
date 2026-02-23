@@ -27,7 +27,7 @@ const OurPartnersU = () => {
       <section className="py-11 lg:py-20">
         <Container>
           <div className="text-center pb-9">
-            <Heading text={"Our Partners"} className={"bg-secondary inline text-white"}/>
+            <Heading text={"Our Partner University"} className={"bg-secondary inline text-white"}/>
           </div>
           <div className="w-full overflow-visible relative">
             <Swiper

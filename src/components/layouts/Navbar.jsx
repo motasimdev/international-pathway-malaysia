@@ -15,11 +15,11 @@ import { HiBars3 } from "react-icons/hi2";
 const Navbar = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [login, setLogin] = useState(false);
-  const [loginActive, setLoginActive] = useState(false);
+  // const [login, setlogin] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
-  const toggelActive = () => {
-    setLoginActive(!loginActive);
-  };
+  // const toggelActive = () => {
+  //   setlogin(!login);
+  // };
 
   //scroll behave
   useEffect(() => {
@@ -143,41 +143,47 @@ const Navbar = () => {
             <button className="relative" onClick={() => setLogin(!login)}>
               <div
                 className={`${
-                  loginActive
+                  login
                     ? "border border-secondary bg-secondary"
                     : "bg-transparent"
                 } 
               group hover:bg-secondary transition duration-300 flex items-center border border-secondary lg:py-2 lg:px-3 rounded-full cursor-pointer
               `}
-                onClick={toggelActive}
+                onClick={() => setLogin(!login)}
               >
                 <FaRegCircleUser
-                  className={`${loginActive ? "text-white" : "text-secondary"}
+                  className={`${login ? "text-white" : "text-secondary"}
                 text-secondary text-3xl group-hover:text-white transition duration-300`}
                 />
                 <div className="flex">
                   <PBase
                     text={"Login"}
-                    className={`${loginActive ? "text-white" : "text-secondary"} text-secondary pl-2 font-medium group-hover:text-white transition duration-300`}
+                    className={`${login ? "text-white" : "text-secondary"} text-secondary pl-2 font-medium group-hover:text-white transition duration-300`}
                   />
                   <FaSortDown
-                    className={`${loginActive ? "text-white" : "text-secondary"}
+                    className={`${login ? "text-white" : "text-secondary"}
                   text-secondary group-hover:text-white transition duration-300
                   `}
                   />
                 </div>
               </div>
               {login && (
-                <div className="absolute top-12 right-0 py-2 bg-primary/80 rounded-sm border">
-                  <div className="flex items-center gap-x-4 hover:bg-gray-100/30 text-center py-1 pl-4 pr-16 cursor-pointer">
-                    <FaUserGraduate />
-                    <PBase text={"Student"} className={"text-secondary"} />
+                <>
+                  <div
+                    className="fixed inset-0 z-40"
+                    onClick={() => setLogin(false)}
+                  ></div>
+                  <div className="absolute top-12 right-0 py-2 bg-secondary/50 rounded-sm border z-50">
+                    <div className="flex items-center gap-x-4 hover:bg-gray-100/30 text-center py-1 pl-4 pr-16 cursor-pointer">
+                      <FaUserGraduate className="text-white" />
+                      <PBase text={"Student"} className={" text-white"} />
+                    </div>
+                    <div className="flex items-center gap-x-4 hover:bg-gray-100/30 text-center py-1 pl-4 pr-16 cursor-pointer">
+                      <FaUserTie className="text-white" />
+                      <PBase text={"Agent"} className={" text-white"} />
+                    </div>
                   </div>
-                  <div className="flex items-center gap-x-4 hover:bg-gray-100/30 text-center py-1 pl-4 pr-16 cursor-pointer">
-                    <FaUserTie />
-                    <PBase text={"Agent"} className={"text-secondary"} />
-                  </div>
-                </div>
+                </>
               )}
             </button>
             {/* ========  login btn ====== */}
@@ -185,9 +191,7 @@ const Navbar = () => {
         </div>
       </Container>
       {/* =============Mobile Menu============= */}
-      <nav
-        className={`lg:hidden py-2 px-3 md:px-5 bg-[#d5d5ff]`}
-      >
+      <div className={`lg:hidden py-2 px-3 md:px-5 bg-[#d5d5ff]`}>
         <div className="flex items-center justify-between">
           {/* Logo */}
           <NavLink to={"/"} className="max-w-25">
@@ -202,27 +206,27 @@ const Navbar = () => {
             <div className="relative">
               <div
                 className={`${
-                  loginActive
+                  login
                     ? "border border-secondary bg-secondary shadow-lg"
                     : "bg-transparent"
                 } 
                   group hover:bg-secondary transition-all duration-300 flex items-center border border-secondary py-0.5 pl-1 pr-2 rounded-full cursor-pointer w-full justify-center`}
-                onClick={toggelActive}
+                onClick={() => setLogin(!login)}
               >
                 <FaRegCircleUser
                   className={`${
-                    loginActive ? "text-white" : "text-secondary"
+                    login ? "text-white" : "text-secondary"
                   } text-[21px] mr-1 group-hover:text-white transition duration-300`}
                 />
                 <div className="flex items-baseline">
                   <PBase
                     text="Login"
                     className={`${
-                      loginActive ? "text-white" : "text-secondary"
+                      login ? "text-white" : "text-secondary"
                     } font-medium group-hover:text-white transition duration-300`}
                   />
                   <FaSortDown
-                    className={`${loginActive ? "text-white" : "text-secondary"}
+                    className={`${login ? "text-white" : "text-secondary"}
                   text-secondary text-sm group-hover:text-white transition duration-300
                   `}
                   />
@@ -230,17 +234,39 @@ const Navbar = () => {
               </div>
 
               {/* Mobile Dropdown */}
-              {loginActive && (
-                <div className="absolute top-6.5 right-0 bg-secondary/50 backdrop-blur-sm rounded-lg border shadow-xl py-2">
-                  <div className="flex items-center gap-x-4 hover:bg-gray-100/30 text-white py-1 px-5 cursor-pointer transition-all duration-200">
-                    <FaUserGraduate className="text-sm md:text-md" />
-                    <PBase text="Student" className="text-white font-medium" />
+              {login && (
+                <>
+                  <div
+                    className="fixed inset-0 z-40"
+                    onClick={() => setLogin(false)}
+                  ></div>
+                  <div className="absolute top-6.5 right-0 bg-secondary/50 backdrop-blur-sm rounded-lg border shadow-xl py-2">
+                    <div className="flex items-center gap-x-4 hover:bg-gray-100/30 text-white py-1 px-5 cursor-pointer transition-all duration-200">
+                      <FaUserGraduate className="text-sm md:text-md" />
+                      <PBase
+                        text="Student"
+                        className="text-white font-medium"
+                      />
+                    </div>
+                    <div className="flex items-center gap-x-4 hover:bg-gray-100/30 text-white py-1 px-5 cursor-pointer transition-all duration-200">
+                      <FaUserTie className="text-sm md:text-md" />
+                      <PBase text="Agent" className="text-white font-medium" />
+                    </div>
                   </div>
-                  <div className="flex items-center gap-x-4 hover:bg-gray-100/30 text-white py-1 px-5 cursor-pointer transition-all duration-200">
-                    <FaUserTie className="text-sm md:text-md" />
-                    <PBase text="Agent" className="text-white font-medium" />
+                  <div className="absolute top-6.5 right-0 bg-secondary/50 backdrop-blur-sm rounded-lg border shadow-xl py-2">
+                    <div className="flex items-center gap-x-4 hover:bg-gray-100/30 text-white py-1 px-5 cursor-pointer transition-all duration-200">
+                      <FaUserGraduate className="text-sm md:text-md" />
+                      <PBase
+                        text="Student"
+                        className="text-white font-medium"
+                      />
+                    </div>
+                    <div className="flex items-center gap-x-4 hover:bg-gray-100/30 text-white py-1 px-5 cursor-pointer transition-all duration-200">
+                      <FaUserTie className="text-sm md:text-md" />
+                      <PBase text="Agent" className="text-white font-medium" />
+                    </div>
                   </div>
-                </div>
+                </>
               )}
             </div>
             {/* Mobile menu button */}
@@ -354,7 +380,7 @@ const Navbar = () => {
             </ul>
           </div>
         )}
-      </nav>
+      </div>
     </nav>
   );
 };
