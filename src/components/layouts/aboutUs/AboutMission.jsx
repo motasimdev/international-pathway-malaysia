@@ -6,7 +6,7 @@ import PBase from "../../PBase";
 const AboutMission = () => {
   return (
     <>
-      <section className="pt-10 pb-18 md:pb-20 lg:py-10">
+      <section className="pt-10 pb-7 md:pb-10 lg:py-10">
         <Container>
           <div className="md:flex items-center justify-between text-center md:text-left">
             <div className="bg-blue-300 p-5 mb-5 md:mb-0 md:w-[48%] rounded-lg">
