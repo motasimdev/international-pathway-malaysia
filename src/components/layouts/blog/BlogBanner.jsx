@@ -7,7 +7,7 @@ import blogImage from "/src/assets/blog1.svg";
 const BlogBanner = () => {
   return (
     <>
-      <section className="py-11 lg:pt-20 bg-secondary">
+      <section className="py-11 lg:pt-20 bg-secondary z-0">
         <Container>
           <div className="flex items-center">
             <div className="md:w-[50%]">

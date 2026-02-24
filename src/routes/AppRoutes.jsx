@@ -6,6 +6,7 @@ import University from "../components/pages/University";
 import OurServices from "../components/pages/OurServices";
 import Blog from "../components/pages/Blog";
 import Contact from "../components/pages/Contact";
+import BlogDetails from "../components/layouts/blog/BlogDetails";
 
 const AppRoutes = createBrowserRouter([
   {
@@ -36,6 +37,10 @@ const AppRoutes = createBrowserRouter([
       {
         path: "contact",
         Component: Contact,
+      },
+      {
+        path: "blog/:id",
+        Component: BlogDetails,
       },
     ],
   },
