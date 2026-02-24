@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router";
 
-const CardPartnerU = ({ image, alt, heading, description }) => {
+const CardPartnerU = ({ image, alt, heading, description, to, target}) => {
   return (
     <>
         <div className="block w-full p-6 border border-gray-300 rounded-xl shadow-xs">
@@ -13,8 +13,9 @@ const CardPartnerU = ({ image, alt, heading, description }) => {
           </h5>
           <div className="hidden md:block py-3.5"></div>
           <p className="mb-6 line-clamp-3">{description}</p>
-          <Link
-            to={"/"}
+          <a
+            href={to}
+            target={target}
             className="inline-flex items-center bg-gray-100 border border-gray-300 hover:bg-gray-300 shadow-xs font-medium leading-5 rounded-2xl text-sm px-4 py-2.5 transition duration-200"
           >
             Read more
@@ -35,7 +36,7 @@ const CardPartnerU = ({ image, alt, heading, description }) => {
                 d="M19 12H5m14 0-4 4m4-4-4-4"
               />
             </svg>
-          </Link>
+          </a>
         </div>
     </>
   );

@@ -6,6 +6,8 @@ import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
 import { Pagination, Navigation } from "swiper/modules";
+import { Autoplay } from "swiper/modules";
+// Import Swiper styles
 
 import slideOne from "/src/assets/asia-pacific-university.webp";
 import slideTwo from "/src/assets/cyberjaya-university.webp";
@@ -16,7 +18,6 @@ import slideSix from "/src/assets/segi-university.webp";
 import slideSeven from "/src/assets/Taylors-University.webp";
 import slideEight from "/src/assets/unirazak-university.jpg";
 import slideNine from "/src/assets/wollongong-university.jpg";
-import { Link } from "react-router";
 import { FaAnglesRight, FaAnglesLeft } from "react-icons/fa6";
 import CardPartnerU from "../../CardPartnerU";
 import Heading from "../../Heading";
@@ -27,10 +28,14 @@ const OurPartnersU = () => {
       <section className="py-11 lg:py-20">
         <Container>
           <div className="text-center pb-9">
-            <Heading text={"Our Partner University"} className={"bg-secondary inline text-white"}/>
+            <Heading
+              text={"Our Partner University"}
+              className={"bg-secondary inline text-white"}
+            />
           </div>
           <div className="w-full overflow-visible relative">
             <Swiper
+              preventClicks={false}
               observer={true}
               observeParents={true}
               slidesPerView={1}
@@ -51,13 +56,18 @@ const OurPartnersU = () => {
                 nextEl: ".custom-next",
                 prevEl: ".custom-prev",
               }}
-              modules={[Pagination, Navigation]}
+              modules={[Pagination, Navigation,]}
+              autoplay={{
+                delay: 2000,
+              }}
               className="mySwiper"
             >
               <SwiperSlide>
                 <CardPartnerU
+                  to={"https://www.apu.edu.my/"}
+                  target={"_blank"}
                   image={slideOne}
-                  alt={""}
+                  alt={"Asia Pacific University"}
                   heading={"Study in Asia Pacific University"}
                   description={
                     "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Esse explicabo recusandae consequuntur reiciendis aut, ipsa sapiente reprehenderit fugit facilis rem nesciunt ad optio ratione et quod repudiandae perferendis qui. Quam eligendi minima atque alias harum eveniet inventore accusamus? Inventore itaque libero voluptas tenetur?"
@@ -66,8 +76,10 @@ const OurPartnersU = () => {
               </SwiperSlide>
               <SwiperSlide>
                 <CardPartnerU
+                  to={"https://cyberjaya.edu.my/"}
+                  target={"_blank"}
                   image={slideTwo}
-                  alt={""}
+                  alt={"Cyberjaya University"}
                   heading={"Study in Cyberjaya University"}
                   description={
                     "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Esse explicabo recusandae consequuntur reiciendis aut, ipsa sapiente reprehenderit fugit facilis rem nesciunt ad optio ratione et quod repudiandae perferendis qui. Quam eligendi minima atque alias harum eveniet inventore accusamus? Inventore itaque libero voluptas tenetur?"
@@ -76,8 +88,10 @@ const OurPartnersU = () => {
               </SwiperSlide>
               <SwiperSlide>
                 <CardPartnerU
+                  to={"https://newinti.edu.my/"}
+                  target={"_blank"}
                   image={slideThree}
-                  alt={""}
+                  alt={"INTI University"}
                   heading={"Study in INTI University"}
                   description={
                     "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Esse explicabo recusandae consequuntur reiciendis aut, ipsa sapiente reprehenderit fugit facilis rem nesciunt ad optio ratione et quod repudiandae perferendis qui. Quam eligendi minima atque alias harum eveniet inventore accusamus? Inventore itaque libero voluptas tenetur?"
@@ -86,8 +100,10 @@ const OurPartnersU = () => {
               </SwiperSlide>
               <SwiperSlide>
                 <CardPartnerU
+                  to={"https://www.lincoln.edu.my/"}
+                  target={"_blank"}
                   image={slideFour}
-                  alt={""}
+                  alt={"Linkcoln University"}
                   heading={"Study in Linkcoln University"}
                   description={
                     "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Esse explicabo recusandae consequuntur reiciendis aut, ipsa sapiente reprehenderit fugit facilis rem nesciunt ad optio ratione et quod repudiandae perferendis qui. Quam eligendi minima atque alias harum eveniet inventore accusamus? Inventore itaque libero voluptas tenetur?"
@@ -96,8 +112,10 @@ const OurPartnersU = () => {
               </SwiperSlide>
               <SwiperSlide>
                 <CardPartnerU
+                  to={"https://www.nilai.edu.my/"}
+                  target={"_blank"}
                   image={slideFive}
-                  alt={""}
+                  alt={"Nilai University"}
                   heading={"Study in Nilai University"}
                   description={
                     "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Esse explicabo recusandae consequuntur reiciendis aut, ipsa sapiente reprehenderit fugit facilis rem nesciunt ad optio ratione et quod repudiandae perferendis qui. Quam eligendi minima atque alias harum eveniet inventore accusamus? Inventore itaque libero voluptas tenetur?"
@@ -106,8 +124,10 @@ const OurPartnersU = () => {
               </SwiperSlide>
               <SwiperSlide>
                 <CardPartnerU
+                  to={"https://www.segi.edu.my/"}
+                  target={"_blank"}
                   image={slideSix}
-                  alt={""}
+                  alt={"Segi University"}
                   heading={"Study in Segi University"}
                   description={
                     "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Esse explicabo recusandae consequuntur reiciendis aut, ipsa sapiente reprehenderit fugit facilis rem nesciunt ad optio ratione et quod repudiandae perferendis qui. Quam eligendi minima atque alias harum eveniet inventore accusamus? Inventore itaque libero voluptas tenetur?"
@@ -116,8 +136,10 @@ const OurPartnersU = () => {
               </SwiperSlide>
               <SwiperSlide>
                 <CardPartnerU
+                  to={"https://university.taylors.edu.my/"}
+                  target={"_blank"}
                   image={slideSeven}
-                  alt={""}
+                  alt={"Taylors University"}
                   heading={"Study in Taylors University"}
                   description={
                     "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Esse explicabo recusandae consequuntur reiciendis aut, ipsa sapiente reprehenderit fugit facilis rem nesciunt ad optio ratione et quod repudiandae perferendis qui. Quam eligendi minima atque alias harum eveniet inventore accusamus? Inventore itaque libero voluptas tenetur?"
@@ -126,8 +148,10 @@ const OurPartnersU = () => {
               </SwiperSlide>
               <SwiperSlide>
                 <CardPartnerU
+                  to={"https://unirazak.edu.my/"}
+                  target={"_blank"}
                   image={slideEight}
-                  alt={""}
+                  alt={"Unirazak University"}
                   heading={"Study in Unirazak University"}
                   description={
                     "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Esse explicabo recusandae consequuntur reiciendis aut, ipsa sapiente reprehenderit fugit facilis rem nesciunt ad optio ratione et quod repudiandae perferendis qui. Quam eligendi minima atque alias harum eveniet inventore accusamus? Inventore itaque libero voluptas tenetur?"
@@ -136,8 +160,10 @@ const OurPartnersU = () => {
               </SwiperSlide>
               <SwiperSlide>
                 <CardPartnerU
+                  to={"https://www.uow.edu.my/"}
+                  target={"_blank"}
                   image={slideNine}
-                  alt={""}
+                  alt={"Wollongong University"}
                   heading={"Study in Wollongong University"}
                   description={
                     "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Esse explicabo recusandae consequuntur reiciendis aut, ipsa sapiente reprehenderit fugit facilis rem nesciunt ad optio ratione et quod repudiandae perferendis qui. Quam eligendi minima atque alias harum eveniet inventore accusamus? Inventore itaque libero voluptas tenetur?"
