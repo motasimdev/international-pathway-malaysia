@@ -15,7 +15,7 @@ const CardBlog = ({ id, src, title, date, description, miniLogo }) => {
       setCopied(true);
       setTimeout(() => {
         setCopied(false);
-      }, 1500);
+      }, 500);
     } catch (err) {
       console.error("copy failed:", err);
     }
