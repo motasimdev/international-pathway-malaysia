@@ -13,7 +13,7 @@ import PBase from "../PBase";
 import { HiBars3 } from "react-icons/hi2";
 
 const Navbar = () => {
-  const [isScrolled, setIsScrolled] = useState(false);
+  // const [isScrolled, setIsScrolled] = useState(false);
   const [login, setLogin] = useState(false);
   // const [login, setlogin] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
@@ -22,18 +22,18 @@ const Navbar = () => {
   // };
 
   //scroll behave
-  useEffect(() => {
-    const handleScroll = () => {
-      setIsScrolled(window.scrollY > 50);
-    };
-    window.addEventListener("scroll", handleScroll);
-    return () => window.removeEventListener("scroll", handleScroll);
-  }, []);
+  // useEffect(() => {
+  //   const handleScroll = () => {
+  //     setIsScrolled(window.scrollY > 50);
+  //   };
+  //   window.addEventListener("scroll", handleScroll);
+  //   return () => window.removeEventListener("scroll", handleScroll);
+  // }, []);
   //scroll behave
 
   return (
     <nav
-      className={`lg:py-3 shadow-sm fixed w-full top-0 z-1000 ${isScrolled ? "bg-white" : "bg-transparent"}`}
+      className={`lg:py-3 shadow-sm sticky w-full top-0 z-1000 bg-white`}
     >
       <Container>
         <div className="hidden lg:flex justify-between items-center">

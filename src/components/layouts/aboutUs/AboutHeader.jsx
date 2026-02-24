@@ -12,7 +12,7 @@ import aboutFour from '/src/assets/aboutFour.svg'
 const AboutHeader = () => {
   return (
     <>
-      <section className="pt-20 md:pt-25 pb-5 md:pb-20 lg:pt-30 lg:pb-15">
+      <section className="pt-20 md:pt-25 pb-5 md:pb-20 lg:pt-15 lg:pb-15">
         <Container>
           <div className="text-center">
             <div className="md:flex items-center gap-x-2 justify-center">
