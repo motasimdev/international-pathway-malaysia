@@ -11,7 +11,7 @@ const CardBlog = ({ id, src, title, date, description, miniLogo }) => {
   const handleCopy = async () => {
     try {
       await navigator.clipboard.writeText(
-        `https://International-Pathway-Malaysia.com/blog/${id}`,
+        `https://international-pathway-malaysia.vercel.app/blog/${id}`,
       );
       setCopied(true);
       setTimeout(() => {
@@ -64,7 +64,7 @@ const CardBlog = ({ id, src, title, date, description, miniLogo }) => {
 
             {showLink && (
               <div className="py-px absolute top-6 right-0 bg-gray-400 text-white text-sm rounded-sm shadow-lg   px-2">
-                <span className="truncate max-w-xs">{`https://International-Pathway-Malaysia.com/blog/${id}`}</span>
+                <span className="md:truncate max-w-xs">{`https://international-pathway-malaysia.vercel.app/blog/${id}`}</span>
                 <button
                   className=" hover:text-secondary rounded cursor-pointer transition"
                   onClick={handleCopy}
