@@ -13,7 +13,7 @@ import PBase from "../PBase";
 import { HiBars3 } from "react-icons/hi2";
 
 const Navbar = () => {
-  // const [isScrolled, setIsScrolled] = useState(false);
+  const [isScrolled, setIsScrolled] = useState(false);
   const [login, setLogin] = useState(false);
   // const [login, setlogin] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
@@ -22,18 +22,18 @@ const Navbar = () => {
   // };
 
   //scroll behave
-  // useEffect(() => {
-  //   const handleScroll = () => {
-  //     setIsScrolled(window.scrollY > 50);
-  //   };
-  //   window.addEventListener("scroll", handleScroll);
-  //   return () => window.removeEventListener("scroll", handleScroll);
-  // }, []);
+  useEffect(() => {
+    const handleScroll = () => {
+      setIsScrolled(window.scrollY > 50);
+    };
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
   //scroll behave
 
   return (
     <nav
-      className={`lg:py-3 shadow-sm sticky w-full top-0 z-1000 bg-white`}
+      className={`lg:py-3 shadow-sm sticky w-full top-0 z-1000 ${isScrolled ? "bg-white" : "bg-transparent"}`}
     >
       <Container>
         <div className="hidden lg:flex justify-between items-center">
@@ -191,7 +191,7 @@ const Navbar = () => {
         </div>
       </Container>
       {/* =============Mobile Menu============= */}
-      <div className={`lg:hidden py-2 px-3 md:px-5 bg-[#d5d5ff]`}>
+      <div className={`lg:hidden py-2 px-3 md:px-5 bg-white z-50`}>
         <div className="flex items-center justify-between">
           {/* Logo */}
           <NavLink to={"/"} className="max-w-25">
@@ -237,10 +237,10 @@ const Navbar = () => {
               {login && (
                 <>
                   <div
-                    className="fixed inset-0 z-40"
+                    className="fixed inset-0 z-30"
                     onClick={() => setLogin(false)}
                   ></div>
-                  <div className="absolute top-6.5 right-0 bg-secondary/50 backdrop-blur-sm rounded-lg border shadow-xl py-2">
+                  <div className="absolute top-6.5 right-0 bg-secondary/50 backdrop-blur-sm rounded-lg border shadow-xl py-2 z-50">
                     <div className="flex items-center gap-x-4 hover:bg-gray-100/30 text-white py-1 px-5 cursor-pointer transition-all duration-200">
                       <FaUserGraduate className="text-sm md:text-md" />
                       <PBase
@@ -253,7 +253,7 @@ const Navbar = () => {
                       <PBase text="Agent" className="text-white font-medium" />
                     </div>
                   </div>
-                  <div className="absolute top-6.5 right-0 bg-secondary/50 backdrop-blur-sm rounded-lg border shadow-xl py-2">
+                  {/* <div className="absolute top-6.5 right-0 bg-secondary/50 backdrop-blur-sm rounded-lg border shadow-xl py-2">
                     <div className="flex items-center gap-x-4 hover:bg-gray-100/30 text-white py-1 px-5 cursor-pointer transition-all duration-200">
                       <FaUserGraduate className="text-sm md:text-md" />
                       <PBase
@@ -265,7 +265,7 @@ const Navbar = () => {
                       <FaUserTie className="text-sm md:text-md" />
                       <PBase text="Agent" className="text-white font-medium" />
                     </div>
-                  </div>
+                  </div> */}
                 </>
               )}
             </div>
@@ -290,7 +290,7 @@ const Navbar = () => {
               className="fixed inset-0 z-30"
               onClick={() => setIsMobileMenuOpen(false)}
             ></div>
-            <div className="pb-4 border-t border-gray-200">
+            <div className="relative pb-4 border-t border-gray-200 z-50">
               <ul className="flex flex-col pt-2 text-center">
                 <li>
                   <NavLink
