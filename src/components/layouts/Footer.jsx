@@ -89,7 +89,7 @@ const Footer = () => {
 
             {/* =========icon list========== */}
             <div className="flex items-center justify-center gap-x-3 pt-2 pb-8 lg:pb-15">
-              <NavLink to={"https://igc.com.bd/"} target="_blank">
+              <NavLink to={"https://www.facebook.com/profile.php?id=61588417710246"} target="_blank">
                 <div className="group hover:bg-gray-300 transition duration-300 py-3 px-3 bg-secondary rounded-full ">
                   <FaFacebookF className="text-white group-hover:text-primary transition duration-300" />
                 </div>

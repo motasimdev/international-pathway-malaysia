@@ -5,9 +5,10 @@ import Container from "../../Container";
 import PBase from "../../PBase";
 import Heading from "../../Heading";
 import { useState } from "react";
-import { Bounce, Flip, ToastContainer, toast } from "react-toastify";
+import { Flip, toast } from "react-toastify";
 
 const ContactFormAddress = () => {
+  const [loading, setLoading] = useState(false);
   const [formData, setFormData] = useState({
     name: "",
     phone: "",
@@ -28,33 +29,73 @@ const ContactFormAddress = () => {
   // submit handler
   const handleSubmit = (e) => {
     e.preventDefault();
+    if (loading) {
+      return;
+    }
+    if (
+      !formData.name ||
+      !formData.email ||
+      !formData.phone ||
+      !formData.message
+    ) {
+      toast.error("Please fill all requred field", {
+        position: "top-center",
+        autoClose: 1000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+        theme: "colored",
+        transition: Flip,
+      });
+      return;
+    }
 
     console.log("Form Data", formData);
-    toast.success("Successfully Submited!", {
-      position: "top-center",
-      autoClose: 3000,
-      hideProgressBar: false,
-      closeOnClick: false,
-      pauseOnHover: true,
-      draggable: true,
-      progress: undefined,
-      theme: "colored",
-      transition: Flip,
-    });
 
-    // reset form
-    setFormData({
-      name: "",
-      phone: "",
-      email: "",
-      subject: "",
-      message: "",
-    });
+    try {
+      setLoading(true);
+      toast.success("Successfully Submited!", {
+        position: "top-center",
+        autoClose: 1000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+        theme: "colored",
+        transition: Flip,
+      });
+
+      // reset form
+      setFormData({
+        name: "",
+        phone: "",
+        email: "",
+        subject: "",
+        message: "",
+      });
+    } catch (error) {
+      toast.error("Something went wrong!", {
+        position: "top-center",
+        autoClose: 1000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+        theme: "colored",
+        transition: Flip,
+      });
+    } finally {
+      setLoading(false);
+    }
   };
 
   return (
     <>
-      <section className="py-11 lg:py-10 ">
+      <section className="py-5 lg:py-10 ">
         <Container>
           <div className="flex flex-col gap-y-5 md:flex-row justify-between">
             <div className="md:w-[35%] flex flex-col gap-y-5">
@@ -134,7 +175,7 @@ const ContactFormAddress = () => {
                       <input
                         type="text"
                         name="name"
-                        placeholder="Your Name"
+                        placeholder="Your Name*"
                         value={formData.name}
                         onChange={handleChange}
                         className="input"
@@ -143,7 +184,7 @@ const ContactFormAddress = () => {
                       <input
                         type="tel"
                         name="phone"
-                        placeholder="Phone Number"
+                        placeholder="Phone Number*"
                         value={formData.phone}
                         onChange={handleChange}
                         className="input"
@@ -152,7 +193,7 @@ const ContactFormAddress = () => {
                       <input
                         type="email"
                         name="email"
-                        placeholder="Email Address"
+                        placeholder="Email Address*"
                         value={formData.email}
                         onChange={handleChange}
                         className="input"
@@ -171,7 +212,7 @@ const ContactFormAddress = () => {
                     {/* textarea */}
                     <textarea
                       name="message"
-                      placeholder="Your Message"
+                      placeholder="Your Message*"
                       value={formData.message}
                       onChange={handleChange}
                       rows="6"
@@ -180,24 +221,13 @@ const ContactFormAddress = () => {
 
                     {/* submit */}
                     <button
+                      disabled={loading}
                       type="submit"
-                      className="w-full md:w-fit px-8 py-3 rounded-full bg-secondary text-white font-medium hover:opacity-90 transition cursor-pointer"
+                      className={`w-full md:w-fit px-8 py-3 rounded-full bg-secondary text-white font-medium hover:opacity-90 transition cursor-pointer ${
+                        loading ? "opacity-50 cursor-not-allowed" : ""
+                      }`}
                     >
                       Send Message
-                      <ToastContainer
-                        position="top-center"
-                        autoClose={3000}
-                        hideProgressBar={false}
-                        newestOnTop={false}
-                        closeOnClick={false}
-                        rtl={false}
-                        pauseOnFocusLoss
-                        draggable
-                        pauseOnHover
-                        theme="colored"
-                        transition={Flip}
-                        className={"z-1000 pt-15"}
-                      />
                     </button>
                   </form>
                 </div>

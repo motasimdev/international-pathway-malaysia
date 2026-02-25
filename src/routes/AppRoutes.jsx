@@ -7,6 +7,7 @@ import OurServices from "../components/pages/OurServices";
 import Blog from "../components/pages/Blog";
 import Contact from "../components/pages/Contact";
 import BlogDetails from "../components/layouts/blog/BlogDetails";
+import BecomeAPartner from "../components/pages/BecomeAPartner";
 
 const AppRoutes = createBrowserRouter([
   {
@@ -41,6 +42,10 @@ const AppRoutes = createBrowserRouter([
       {
         path: "blog/:slug",
         Component: BlogDetails,
+      },
+      {
+        path: "become-a-partner",
+        Component: BecomeAPartner,
       },
     ],
   },

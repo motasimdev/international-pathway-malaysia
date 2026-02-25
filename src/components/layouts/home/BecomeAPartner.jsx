@@ -21,7 +21,7 @@ const BecomeAPartner = () => {
               >
                 <img src={round} alt="" className="size-20 md:size-33" />
               </div>
-              <Link>
+              <Link to={"/become-a-partner"}>
                 <Button className={"relative z-10"}>
                   <div className="flex items-center">
                     <p className="font-bold tracking-widest">Apply Now </p>
