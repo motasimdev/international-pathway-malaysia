@@ -1,24 +1,35 @@
 import { useParams, Link } from "react-router";
 import { FaCalendarAlt } from "react-icons/fa";
 import blogs from "../../../data/blog";
+import PBase from "../../PBase";
+import { FaAngleRight } from "react-icons/fa6";
 
 const BlogDetails = () => {
   const { id } = useParams();
-  const blog = blogs.find(b => b.id === id);
-  const relatedBlogs = blogs.filter(b => b.id !== id);
+  const blog = blogs.find((b) => b.id === id);
+  const relatedBlogs = blogs.filter((b) => b.id !== id);
 
   if (!blog) return <p>Blog not found</p>;
 
   return (
-    <section className="container mx-auto px-4 py-10">
-      <div className="grid grid-cols-1 lg:grid-cols-12 gap-8">
+    <section className="container mx-auto px-4 lg:pt-5 lg:pb-10">
+      {/* ======= bradcumb ======= */}
+      <div className="flex items-center">
+        <Link to={"/blogs"}>
+          <PBase text={"Blog"} className={"py-5"} />
+        </Link>
+        <FaAngleRight />
+        <PBase text={`Blog${id}`} className={'cursor-pointer'}/>
+      </div>
+      {/* ======= bradcumb ======= */}
 
+      <div className="grid grid-cols-1 lg:grid-cols-12 gap-8">
         {/* Left Blog Content */}
         <div className="lg:col-span-8">
           <img
             src={blog.image}
             alt={blog.title}
-            className="mb-6 h-80 w-full rounded-xl object-cover"
+            className="mb-6 h-80 w-full rounded-xl object-cover lg:hover:scale-103 transition-transform duration-500"
           />
 
           <h1 className="mb-3 text-3xl font-bold text-gray-800">
@@ -42,7 +53,7 @@ const BlogDetails = () => {
           </h3>
 
           <div className="space-y-4">
-            {relatedBlogs.map(item => (
+            {relatedBlogs.map((item) => (
               <Link
                 key={item.id}
                 to={`/blog/${item.id}`}
@@ -60,7 +71,6 @@ const BlogDetails = () => {
             ))}
           </div>
         </aside>
-
       </div>
     </section>
   );
