@@ -15,11 +15,12 @@ const BlogCards = () => {
               <CardBlog
                 key={item.id}
                 id={item.id}
+                slug={item.slug}
+                title={item.title}
+                description={item.description}
                 src={item.image}
                 miniLogo={item.miniLogo}
                 date={item.date}
-                title={item.title}
-                description={item.description}
               />
             ))}
           </div>

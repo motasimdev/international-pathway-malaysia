@@ -8,6 +8,7 @@ import segiLogo from '/src/assets/university-logos/SEGi-University.png'
 const blogs = [
   {
     id: "1",
+    slug: "Why-Study-in-Malaysia",
     title: "Why Study in Malaysia?",
     description: "Short description for card view...",
     image: asiaPacific,
@@ -17,6 +18,7 @@ const blogs = [
   },
   {
     id: "2",
+    slug: "Top-Universitie-in-Malaysia",
     title: "Top Universities in Malaysia",
     description: "Short description for card view...",
     image: inti,
@@ -26,6 +28,7 @@ const blogs = [
   },
   {
     id: "3",
+    slug: "Top-Universit-in-Malaysia",
     title: "Top Universities in Malaysia",
     description: "Short description for card view...",
     image: segi,
@@ -35,6 +38,7 @@ const blogs = [
   },
   {
     id: "4",
+    slug: "Why-Stu-in-Malaysia",
     title: "Why Study in Malaysia?",
     description: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maxime non facere repellat aliquam ipsum, consequatur quis corrupti odit, alias veniam cumque. Est fuga sunt ipsum vel iste nostrum facere asperiores! Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque harum facere esse facilis eius at suscipit incidunt tenetur nihil laboriosam quidem nesciunt ipsum nam aut fugit earum quibusdam, quaerat aspernatur?",
     image: asiaPacific,
@@ -44,6 +48,7 @@ const blogs = [
   },
   {
     id: "5",
+    slug: "Top-Univsities-in-Malaysia",
     title: "Top Universities in Malaysia",
     description: "Short description for card view...",
     image: inti,
@@ -53,6 +58,7 @@ const blogs = [
   },
   {
     id: "6",
+    slug: "Top-niversities-in-Malaysia",
     title: "Top Universities in Malaysia",
     description: "Short description for card view...",
     image: segi,

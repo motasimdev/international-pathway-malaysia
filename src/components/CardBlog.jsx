@@ -3,19 +3,19 @@ import { FaCalendarAlt, FaShareAlt } from "react-icons/fa";
 import { useNavigate } from "react-router";
 import { MdCopyAll } from "react-icons/md";
 
-const CardBlog = ({ id, src, title, date, description, miniLogo }) => {
+const CardBlog = ({ id, slug, src, title, date, description, miniLogo }) => {
   const [showLink, setShowLink] = useState(false);
   const [copied, setCopied] = useState(false);
   const navigate = useNavigate();
 
   const handleCopy = async () => {
     try {
-      const fullUrl =  `${window.location.origin}/blog/${id}`
+      const fullUrl = `${window.location.origin}/blog/${slug}`;
       await navigator.clipboard.writeText(fullUrl);
       setCopied(true);
       setTimeout(() => {
         setCopied(false);
-      }, 500);
+      }, 1000);
     } catch (err) {
       console.error("copy failed:", err);
     }
@@ -54,27 +54,26 @@ const CardBlog = ({ id, src, title, date, description, miniLogo }) => {
           </div>
 
           <div className="relative">
-            <button
+            {/* <button
               className="cursor-pointer p-1 hover:text-secondary transition"
               onClick={() => setShowLink(!showLink)}
+            > */}
+            {/* </button> */}
+
+            {/* {showLink && (
+              <div className="py-px absolute top-6 right-0 bg-gray-400 text-white text-sm rounded-sm shadow-lg   px-2">
+                <span className="md:truncate max-w-xs">{`${window.location.origin}/blog/${slug}`}</span> */}
+            <button
+              className=" hover:text-secondary rounded cursor-pointer transition"
+              onClick={handleCopy}
             >
               <FaShareAlt size={16} />
-            </button>
 
-            {showLink && (
-              <div className="py-px absolute top-6 right-0 bg-gray-400 text-white text-sm rounded-sm shadow-lg   px-2">
-                <span className="md:truncate max-w-xs">{`${window.location.origin}/blog/${id}`}</span>
-                <button
-                  className=" hover:text-secondary rounded cursor-pointer transition"
-                  onClick={handleCopy}
-                >
-                  <MdCopyAll />
-                </button>
-                {copied && (
-                  <span className="ml-2 text-xs text-white">Copied!</span>
-                )}
-              </div>
-            )}
+              {/* <MdCopyAll /> */}
+            </button>
+            {copied && <span className="absolute bottom-5 right-0 ml-2 text-xs text-gray-400">Copied!</span>}
+            {/* </div>
+            )} */}
           </div>
         </div>
 
@@ -85,7 +84,7 @@ const CardBlog = ({ id, src, title, date, description, miniLogo }) => {
 
         {/* Button */}
         <button
-          onClick={() => navigate(`/blog/${id}`)}
+          onClick={() => navigate(`/blog/${slug}`)}
           className="inline-flex items-center gap-2 rounded-full border border-secondary px-5 py-2 text-sm font-medium text-secondary transition-all hover:bg-secondary hover:text-white cursor-pointer"
         >
           Read More

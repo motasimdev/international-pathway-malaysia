@@ -5,9 +5,9 @@ import PBase from "../../PBase";
 import { FaAngleRight } from "react-icons/fa6";
 
 const BlogDetails = () => {
-  const { id } = useParams();
-  const blog = blogs.find((b) => b.id === id);
-  const relatedBlogs = blogs.filter((b) => b.id !== id);
+  const { slug } = useParams();
+  const blog = blogs.find((b) => b.slug === slug);
+  const relatedBlogs = blogs.filter((b) => b.slug !== slug);
 
   if (!blog) return <p>Blog not found</p>;
 
@@ -19,7 +19,7 @@ const BlogDetails = () => {
           <PBase text={"Blog"} className={"py-5"} />
         </Link>
         <FaAngleRight />
-        <PBase text={`Blog${id}`} className={'cursor-pointer'}/>
+        <PBase text={`${slug}`} className={'cursor-pointer'}/>
       </div>
       {/* ======= bradcumb ======= */}
 
@@ -56,7 +56,7 @@ const BlogDetails = () => {
             {relatedBlogs.map((item) => (
               <Link
                 key={item.id}
-                to={`/blog/${item.id}`}
+                to={`/blog/${item.slug}`}
                 className="group flex gap-3 rounded-lg bg-white p-3 shadow-sm hover:shadow-md"
               >
                 <img

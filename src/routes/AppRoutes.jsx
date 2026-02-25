@@ -39,7 +39,7 @@ const AppRoutes = createBrowserRouter([
         Component: Contact,
       },
       {
-        path: "blog/:id",
+        path: "blog/:slug",
         Component: BlogDetails,
       },
     ],
