@@ -1,9 +1,13 @@
-import React from 'react'
+import React from "react";
+import ContactFormAddress from "../layouts/contact/ContactFormAddress";
+
 
 const Contact = () => {
   return (
-    <div>Contact</div>
-  )
-}
+    <>
+      <ContactFormAddress/>
+    </>
+  );
+};
 
-export default Contact
+export default Contact;
