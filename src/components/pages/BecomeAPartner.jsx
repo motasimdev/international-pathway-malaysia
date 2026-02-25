@@ -5,6 +5,7 @@ import PBase from "../PBase";
 import Heading from "../Heading";
 import partnerImage from "/src/assets/become-partner.svg";
 import { Universities } from "../../constant/universities";
+import axios from "axios";
 
 const BecomeAPartner = () => {
   const [loading, setLoading] = useState(false);

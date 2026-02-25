@@ -6,6 +6,7 @@ import PBase from "../../PBase";
 import Heading from "../../Heading";
 import { useState } from "react";
 import { Flip, toast } from "react-toastify";
+import axios from "axios";
 
 const ContactFormAddress = () => {
   const [loading, setLoading] = useState(false);
@@ -27,7 +28,7 @@ const ContactFormAddress = () => {
   };
 
   // submit handler
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
     if (loading) {
       return;
@@ -54,8 +55,22 @@ const ContactFormAddress = () => {
 
     console.log("Form Data", formData);
 
+    
     try {
       setLoading(true);
+
+        // ====dummy backend API=======
+      await axios.post("https://httpbin.org/post", formData, {
+        headers: {
+          "Content-Type": "application/json",
+        },
+      });
+
+    //   if (res.data.success) {
+    //     toast.success(res.data.message || "Successfully Submited!");
+    //   } else {
+    //     toast.error(res.data.message || "Something went wrong!");
+    //   }
       toast.success("Successfully Submited!", {
         position: "top-center",
         autoClose: 1000,
