@@ -64,7 +64,7 @@ const OurServices = () => {
 
   return (
     <>
-      <section className="pt-20 md:pt-25 pb-5 md:pb-20 lg:pt-10 lg:pb-15">
+      <section className="pt-8 md:pt-25 pb-5 md:pb-20 lg:pt-10 lg:pb-15">
         <Container>
           <div className="hidden md:flex flex-col md:flex-row gap-10">
             {/* LEFT MENU */}

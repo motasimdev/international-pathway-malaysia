@@ -2,33 +2,89 @@ import React, { useMemo, useState } from "react";
 import Container from "../Container";
 import universitiesandcourses from "../../data/universitiesandcourses.json";
 import { FaMapMarkerAlt } from "react-icons/fa";
-import SearchItems from "../SearchItems";
+import ReactPaginate from "react-paginate";
+import Select from "react-select";
+import makeAnimated from "react-select/animated";
+
+const animatedComponents = makeAnimated();
+const PER_PAGE = 10;
 
 const University = () => {
   const [searchText, setSearchText] = useState("");
   const [searchType, setSearchType] = useState("course");
+  const [currentPage, setCurrentPage] = useState(0);
+  const [selectedDegrees, setSelectedDegrees] = useState([]);
 
   const filteredUniversities = useMemo(() => {
-    if (!searchText) return universitiesandcourses.universitiesandcourses;
+    // if (!searchText) return universitiesandcourses.universitiesandcourses;
 
     return universitiesandcourses.universitiesandcourses.filter((item) => {
-      if (searchType === "name") {
-        return item.name.toLowerCase().includes(searchText);
+      //university name search
+      if (searchType === "name" && searchText) {
+        // return item.name.toLowerCase().includes(searchText);
+        if (!item.name.toLocaleLowerCase().includes(searchText)) {
+          return false;
+        }
       }
-      if (searchType === "course") {
-        return item.courses.some((course) =>
-          course.toLowerCase().includes(searchText),
-        );
+
+      // course name search
+      if (searchType === "course" && searchText) {
+        // return item.courses.some((course) =>
+        //   course.toLowerCase().includes(searchText),
+        // );
+        if (
+          !item.courses.some((c) =>
+            c.name.toLocaleLowerCase().includes(searchText),
+          )
+        ) {
+          return false;
+        }
+      }
+
+      // degree filter
+      if (selectedDegrees.length > 0) {
+        const degrees = selectedDegrees.map((d) => d.value);
+        if (
+          !item.courses.some((c) =>
+            c.labelofinterest.some((l) => degrees.includes(l)),
+          )
+        ) {
+          return false;
+        }
       }
       return true;
     });
-  }, [searchText, searchType]);
+  }, [searchText, searchType, selectedDegrees]);
 
-  // search by name
+  //  pagination logic
+  const pageCount = Math.ceil(filteredUniversities.length / PER_PAGE);
+  const offset = currentPage * PER_PAGE;
+  const currentUniversities = filteredUniversities.slice(
+    offset,
+    offset + PER_PAGE,
+  );
+
+  // search by name / course
   const handleSearch = (e, type) => {
     setSearchType(type);
     setSearchText(e.target.value.trim().toLowerCase());
+    setCurrentPage(0);
   };
+
+  const degreeOptions = [
+    { value: "Bachelor", label: "Bachelor" },
+    { value: "Masters", label: "Masters" },
+    { value: "PhD", label: "PhD" },
+    { value: "MBA", label: "MBA" },
+    { value: "MBBS", label: "MBBS" },
+    { value: "MD", label: "MD" },
+    { value: "LLB", label: "LLB" },
+    { value: "MEng", label: "MEng" },
+    { value: "PharmD", label: "PharmD" },
+    { value: "MSc", label: "MSc" },
+    { value: "DVM", label: "DVM" },
+    { value: "Diploma", label: "Diploma" },
+  ];
   return (
     <>
       <section className="py-5 lg:py-10">
@@ -38,7 +94,7 @@ const University = () => {
 
             <div className="flex flex-col md:flex-row md:justify-between md:items-center md:space-x-4 space-y-4 md:space-y-0 mb-6">
               {/* ======= search name ======== */}
-              <div className="relative  md:w-1/2">
+              <div className="relative  md:w-1/3">
                 <label className="text-gray-500">Search by University</label>
 
                 <input
@@ -51,7 +107,7 @@ const University = () => {
               {/* ======= search name ======== */}
 
               {/* ======= search coures ======== */}
-              <div className="relative  md:w-1/2">
+              <div className="relative  md:w-1/3">
                 <label className="text-gray-500">Search by Course</label>
 
                 <input
@@ -65,33 +121,24 @@ const University = () => {
               {/* ======= search coures ======== */}
 
               {/* ========== dropdown menus ===== */}
-              {/* <select className="border border-gray-300 rounded px-4 py-2 w-full md:h-10 md:w-[40%] focus:outline-none cursor-pointer">
-                <option
-                  value=""
-                  disabled
-                  selected
-                  className="text-xs text-white"
-                >
-                  {" "}
-                  Choose Your Course
-                </option>
-                {universitiesandcourses.universitiesandcourses.map((course) => (
-                  <option className="cursor-pointer" key={course.courses}>
-                    <input
-                      type="checkbox"
-                      className="mr-2"
-                      value={course.courses}
-                    />
-                    {course.courses}
-                  </option>
-                ))}
-              </select> */}
+
+              <div className="md:w-1/3">
+                <h5 className="text-gray-500">Label Of Interest</h5>
+                <Select
+                  closeMenuOnSelect={false}
+                  components={animatedComponents}
+                  defaultValue={selectedDegrees}
+                  onChange={(options) => setSelectedDegrees(options || [])}
+                  isMulti
+                  options={degreeOptions}
+                />
+              </div>
               {/* ========== dropdown menus ===== */}
             </div>
 
             {/* University List */}
             <div className="space-y-4">
-              {filteredUniversities.map((uni) => (
+              {currentUniversities.map((uni) => (
                 <div
                   key={uni.id}
                   className="text-center md:text-left flex flex-col md:flex-row items-center md:items-start bg-secondary border border-gray-300 rounded p-4 hover:shadow-lg transition-shadow"
@@ -109,7 +156,10 @@ const University = () => {
                       {uni.name}
                     </h2>
                     <p className="italic text-white">
-                      {uni.courses.join(", ")}
+                      {uni.description}
+                    </p>
+                    <p className=" text-white font-bold">
+                      {uni.courses.map((c) => c.name).join(", ")}
                     </p>
 
                     <div className="flex items-center justify-center md:justify-normal text-white mt-1">
@@ -130,6 +180,22 @@ const University = () => {
                 </div>
               ))}
             </div>
+
+            {/* ============pagination== */}
+            {pageCount > 1 && (
+              <ReactPaginate
+                pageCount={pageCount}
+                onPageChange={(e) => setCurrentPage(e.selected)}
+                previousLabel="Prev"
+                nextLabel="Next"
+                containerClassName="flex justify-center gap-3 mt-20"
+                pageLinkClassName="text-black cursor-pointer border px-3 py-1.5 hover:bg-secondary hover:text-white transition duration-200"
+                pageClassName=""
+                activeClassName="font-bold text-primary! cursor-pointer"
+                nextLinkClassName="text-xl text-secondary cursor-pointer"
+                previousClassName="text-xl text-secondary cursor-pointer"
+              />
+            )}
           </div>
         </Container>
       </section>

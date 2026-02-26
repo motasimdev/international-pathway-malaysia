@@ -53,7 +53,7 @@ const Banner = () => {
   ];
   return (
     <>
-      <section className="relative bg-linear-to-b from-[#d5d5ff] to-[#e6e6ec] pt-30 pb-5 md:pb-20 lg:pt-20 lg:pb-30">
+      <section className="relative bg-linear-to-b from-[#d5d5ff] to-[#e6e6ec] pt-15 pb-5 md:pb-20 lg:pt-20 lg:pb-30">
         {/* =======video======== */}
         {/* <video
           className="absolute inset-0 w-full h-full object-cover"
