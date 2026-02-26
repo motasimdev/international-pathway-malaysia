@@ -4,7 +4,7 @@ import { Flip, toast } from "react-toastify";
 import PBase from "../PBase";
 import Heading from "../Heading";
 import partnerImage from "/src/assets/become-partner.svg";
-import { Universities } from "../../constant/universities";
+import { Universities } from "../../data/universities";
 import axios from "axios";
 
 const BecomeAPartner = () => {
@@ -183,10 +183,10 @@ const BecomeAPartner = () => {
 
             <div className="md:w-[63%]">
               <div className="p-7 bg-secondary rounded-xl">
-                <Heading text={"Send Us Message"} className={"text-white"} />
+                <Heading text={"Become a Partner"} className={"text-white"} />
                 <PBase
                   text={
-                    "Your email address will not be published. Required fields are marked *"
+                    "Fill up the form below and submit to become a Partner"
                   }
                   className={"text-white pt-3"}
                 />

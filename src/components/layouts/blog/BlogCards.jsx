@@ -1,8 +1,6 @@
 import React from "react";
 import Container from "../../Container";
 import CardBlog from "../../CardBlog";
-import blog from "/src/assets/asia-pacific-university.webp";
-import blog1logo from "/src/assets/university-logos/APU-logo.png";
 import blogs from "../../../data/blog";
 
 const BlogCards = () => {

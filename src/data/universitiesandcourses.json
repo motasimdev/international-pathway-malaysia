@@ -1,0 +1,484 @@
+{
+  "universitiesandcourses": [
+    {
+      "id": 1,
+      "name": "Harvard University",
+      "country": "USA",
+      "city": "Cambridge",
+      "website": "harvard.edu",
+      "courses": [
+        "Computer Science",
+        "Business Administration", 
+        "Law",
+        "Medicine",
+        "Economics"
+      ],
+      "image": "/src/assets/cyberjaya-university.webp",
+      "rating": 9.8
+    },
+    {
+      "id": 2,
+      "name": "MIT",
+      "country": "USA",
+      "city": "Cambridge", 
+      "website": "mit.edu",
+      "courses": [
+        "Engineering",
+        "Artificial Intelligence",
+        "Physics",
+        "Data Science",
+        "Mathematics"
+      ],
+      "image": "/src/assets/cyberjaya-university.webp",
+      "rating": 9.7
+    },
+    {
+      "id": 3,
+      "name": "Stanford University",
+      "country": "USA",
+      "city": "Stanford",
+      "website": "stanford.edu",
+      "courses": [
+        "Computer Science",
+        "Entrepreneurship",
+        "Bioengineering",
+        "Psychology",
+        "Design"
+      ],
+      "image": "/src/assets/cyberjaya-university.webp",
+      "rating": 9.6
+    },
+    {
+      "id": 4,
+      "name": "Oxford University",
+      "country": "UK",
+      "city": "Oxford",
+      "website": "ox.ac.uk",
+      "courses": [
+        "Philosophy Politics Economics",
+        "Law",
+        "History",
+        "Medicine",
+        "Computer Science"
+      ],
+      "image": "/src/assets/cyberjaya-university.webp",
+      "rating": 9.5
+    },
+    {
+      "id": 5,
+      "name": "Cambridge University",
+      "country": "UK", 
+      "city": "Cambridge",
+      "website": "cam.ac.uk",
+      "courses": [
+        "Natural Sciences",
+        "Engineering",
+        "Mathematics",
+        "Law",
+        "History"
+      ],
+      "image": "/src/assets/cyberjaya-university.webp",
+      "rating": 9.5
+    },
+    {
+      "id": 6,
+      "name": "ETH Zurich",
+      "country": "Switzerland",
+      "city": "Zurich",
+      "website": "ethz.ch",
+      "courses": [
+        "Robotics",
+        "Physics",
+        "Architecture",
+        "Computer Science",
+        "Mechanical Engineering"
+      ],
+      "image": "/src/assets/cyberjaya-university.webp",
+      "rating": 9.4
+    },
+    {
+      "id": 7,
+      "name": "Imperial College London",
+      "country": "UK",
+      "city": "London",
+      "website": "imperial.ac.uk",
+      "courses": [
+        "Medicine",
+        "Engineering",
+        "Business",
+        "Physics",
+        "Data Science"
+      ],
+      "image": "/src/assets/cyberjaya-university.webp",
+      "rating": 9.3
+    },
+    {
+      "id": 8,
+      "name": "Dhaka University",
+      "country": "Bangladesh",
+      "city": "Dhaka",
+      "website": "du.ac.bd",
+      "courses": [
+        "Computer Science & Engineering",
+        "Law",
+        "Economics",
+        "Pharmacy",
+        "International Relations"
+      ],
+      "image": "/src/assets/cyberjaya-university.webp",
+      "rating": 8.2
+    },
+    {
+      "id": 9,
+      "name": "BUET",
+      "country": "Bangladesh",
+      "city": "Dhaka",
+      "website": "buet.ac.bd",
+      "courses": [
+        "Civil Engineering",
+        "CSE",
+        "Electrical & Electronic Engineering",
+        "Mechanical Engineering",
+        "Architecture"
+      ],
+      "image": "/src/assets/cyberjaya-university.webp",
+      "rating": 8.5
+    },
+    {
+      "id": 10,
+      "name": "North South University",
+      "country": "Bangladesh",
+      "city": "Dhaka",
+      "website": "northsouth.edu",
+      "courses": [
+        "BBA",
+        "CSE",
+        "Accounting",
+        "Electrical Engineering",
+        "English"
+      ],
+      "image": "/src/assets/cyberjaya-university.webp",
+      "rating": 8.0
+    },
+    {
+      "id": 11,
+      "name": "BRAC University",
+      "country": "Bangladesh",
+      "city": "Dhaka",
+      "website": "bracu.ac.bd",
+      "courses": [
+        "CSE",
+        "Architecture",
+        "Business Administration",
+        "Electrical Engineering",
+        "Mathematics"
+      ],
+      "image": "/src/assets/cyberjaya-university.webp",
+      "rating": 8.1
+    },
+    {
+      "id": 12,
+      "name": "University of Toronto",
+      "country": "Canada",
+      "city": "Toronto",
+      "website": "utoronto.ca",
+      "courses": [
+        "Artificial Intelligence",
+        "Rotman MBA",
+        "Computer Science",
+        "Engineering",
+        "Medicine"
+      ],
+      "image": "/src/assets/cyberjaya-university.webp",
+      "rating": 9.2
+    },
+    {
+      "id": 13,
+      "name": "National University of Singapore",
+      "country": "Singapore",
+      "city": "Singapore",
+      "website": "nus.edu.sg",
+      "courses": [
+        "Engineering",
+        "Medicine",
+        "Business",
+        "Computer Science",
+        "Law"
+      ],
+      "image": "/src/assets/cyberjaya-university.webp",
+      "rating": 9.3
+    },
+    {
+      "id": 14,
+      "name": "University College London",
+      "country": "UK",
+      "city": "London",
+      "website": "ucl.ac.uk",
+      "courses": [
+        "Architecture",
+        "Medicine",
+        "Law",
+        "Computer Science",
+        "Neuroscience"
+      ],
+      "image": "/src/assets/cyberjaya-university.webp",
+      "rating": 9.2
+    },
+    {
+      "id": 15,
+      "name": "University of Melbourne",
+      "country": "Australia",
+      "city": "Melbourne",
+      "website": "unimelb.edu.au",
+      "courses": [
+        "Medicine",
+        "Law",
+        "Engineering",
+        "Commerce",
+        "Design"
+      ],
+      "image": "/src/assets/cyberjaya-university.webp",
+      "rating": 9.0
+    },
+    {
+      "id": 16,
+      "name": "University of Sydney",
+      "country": "Australia",
+      "city": "Sydney",
+      "website": "sydney.edu.au",
+      "courses": [
+        "Business",
+        "Nursing",
+        "Design",
+        "Engineering",
+        "Law"
+      ],
+      "image": "/src/assets/cyberjaya-university.webp",
+      "rating": 8.9
+    },
+    {
+      "id": 17,
+      "name": "McGill University",
+      "country": "Canada",
+      "city": "Montreal",
+      "website": "mcgill.ca",
+      "courses": [
+        "Medicine",
+        "Law",
+        "Management",
+        "Engineering",
+        "Neuroscience"
+      ],
+      "image": "/src/assets/cyberjaya-university.webp",
+      "rating": 9.1
+    },
+    {
+      "id": 18,
+      "name": "Tsinghua University",
+      "country": "China",
+      "city": "Beijing",
+      "website": "tsinghua.edu.cn",
+      "courses": [
+        "Engineering",
+        "Computer Science",
+        "Economics",
+        "Architecture",
+        "Medicine"
+      ],
+      "image": "/src/assets/cyberjaya-university.webp",
+      "rating": 9.0
+    },
+    {
+      "id": 19,
+      "name": "University of Tokyo",
+      "country": "Japan",
+      "city": "Tokyo",
+      "website": "u-tokyo.ac.jp",
+      "courses": [
+        "Engineering",
+        "Medicine",
+        "Economics",
+        "Law",
+        "Physics"
+      ],
+      "image": "/src/assets/cyberjaya-university.webp",
+      "rating": 9.1
+    },
+    {
+      "id": 20,
+      "name": "Seoul National University",
+      "country": "South Korea",
+      "city": "Seoul",
+      "website": "snu.ac.kr",
+      "courses": [
+        "Business",
+        "Engineering",
+        "Medicine",
+        "Computer Science",
+        "International Studies"
+      ],
+      "image": "/src/assets/cyberjaya-university.webp",
+      "rating": 9.0
+    },
+    {
+      "id": 21,
+      "name": "University of Delhi",
+      "country": "India",
+      "city": "Delhi",
+      "website": "du.ac.in",
+      "courses": [
+        "Commerce",
+        "Law",
+        "Science",
+        "Economics",
+        "Political Science"
+      ],
+      "image": "/src/assets/cyberjaya-university.webp",
+      "rating": 8.3
+    },
+    {
+      "id": 22,
+      "name": "IIT Bombay",
+      "country": "India",
+      "city": "Mumbai",
+      "website": "iitb.ac.in",
+      "courses": [
+        "Computer Science",
+        "Mechanical Engineering",
+        "Electrical Engineering",
+        "Chemical Engineering",
+        "Civil Engineering"
+      ],
+      "image": "/src/assets/cyberjaya-university.webp",
+      "rating": 8.8
+    },
+    {
+      "id": 23,
+      "name": "Monash University",
+      "country": "Australia",
+      "city": "Melbourne",
+      "website": "monash.edu",
+      "courses": [
+        "Pharmacy",
+        "Information Technology",
+        "Business",
+        "Engineering",
+        "Medicine"
+      ],
+      "image": "/src/assets/cyberjaya-university.webp",
+      "rating": 8.8
+    },
+    {
+      "id": 24,
+      "name": "EPFL",
+      "country": "Switzerland",
+      "city": "Lausanne",
+      "website": "epfl.ch",
+      "courses": [
+        "Computer Science",
+        "Life Sciences",
+        "Engineering",
+        "Physics",
+        "Architecture"
+      ],
+      "image": "/src/assets/cyberjaya-university.webp",
+      "rating": 9.2
+    },
+    {
+      "id": 25,
+      "name": "University of British Columbia",
+      "country": "Canada",
+      "city": "Vancouver",
+      "website": "ubc.ca",
+      "courses": [
+        "Forestry",
+        "Commerce",
+        "Engineering",
+        "Computer Science",
+        "Medicine"
+      ],
+      "image": "/src/assets/cyberjaya-university.webp",
+      "rating": 9.0
+    },
+    {
+      "id": 26,
+      "name": "University of Queensland",
+      "country": "Australia",
+      "city": "Brisbane",
+      "website": "uq.edu.au",
+      "courses": [
+        "Biotechnology",
+        "Mining Engineering",
+        "Business",
+        "Medicine",
+        "Environmental Science"
+      ],
+      "image": "/src/assets/cyberjaya-university.webp",
+      "rating": 8.9
+    },
+    {
+      "id": 27,
+      "name": "NTU Taiwan",
+      "country": "Taiwan",
+      "city": "Taipei",
+      "website": "ntu.edu.tw",
+      "courses": [
+        "Electrical Engineering",
+        "Computer Science",
+        "Medicine",
+        "Business",
+        "Law"
+      ],
+      "image": "/src/assets/cyberjaya-university.webp",
+      "rating": 8.9
+    },
+    {
+      "id": 28,
+      "name": "Peking University",
+      "country": "China",
+      "city": "Beijing",
+      "website": "pku.edu.cn",
+      "courses": [
+        "International Relations",
+        "Medicine",
+        "Economics",
+        "Law",
+        "Computer Science"
+      ],
+      "image": "/src/assets/cyberjaya-university.webp",
+      "rating": 9.0
+    },
+    {
+      "id": 29,
+      "name": "Independent University Bangladesh",
+      "country": "Bangladesh",
+      "city": "Dhaka",
+      "website": "iub.edu.bd",
+      "courses": [
+        "EEE",
+        "English",
+        "Economics",
+        "Environmental Science",
+        "Media & Communication"
+      ],
+      "image": "/src/assets/cyberjaya-university.webp",
+      "rating": 7.9
+    },
+    {
+      "id": 30,
+      "name": "IISc Bangalore",
+      "country": "India",
+      "city": "Bangalore",
+      "website": "iisc.ac.in",
+      "courses": [
+        "Research Physics",
+        "Mathematics",
+        "Computer Science",
+        "Biological Sciences",
+        "Chemical Sciences"
+      ],
+      "image": "/src/assets/cyberjaya-university.webp",
+      "rating": 8.7
+    }
+  ]
+}
