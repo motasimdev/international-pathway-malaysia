@@ -5,11 +5,12 @@ import { FaMapMarkerAlt } from "react-icons/fa";
 import ReactPaginate from "react-paginate";
 import Select from "react-select";
 import makeAnimated from "react-select/animated";
+import { Link } from "react-router";
 
 const animatedComponents = makeAnimated();
 const PER_PAGE = 10;
 
-const University = () => {
+const University = ({id}) => {
   const [searchText, setSearchText] = useState("");
   const [searchType, setSearchType] = useState("course");
   const [currentPage, setCurrentPage] = useState(0);
@@ -155,9 +156,7 @@ const University = () => {
                     <h2 className="text-lg font-semibold text-white">
                       {uni.name}
                     </h2>
-                    <p className="italic text-white">
-                      {uni.description}
-                    </p>
+                    <p className="italic text-white">{uni.description}</p>
                     <p className=" text-white font-bold">
                       {uni.courses.map((c) => c.name).join(", ")}
                     </p>
@@ -170,9 +169,11 @@ const University = () => {
 
                   {/* Buttons */}
                   <div className="flex flex-col space-y-2 mt-4 md:mt-0 md:ml-4">
-                    <button className="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600 cursor-pointer">
-                      Apply Now
-                    </button>
+                    <Link to={`/university/${id}`}>
+                      <button className="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600 cursor-pointer">
+                        Apply Now
+                      </button>
+                    </Link>
                     <button className="bg-gray-200 px-4 py-2 rounded hover:bg-gray-300 cursor-pointer">
                       Details
                     </button>
@@ -185,7 +186,10 @@ const University = () => {
             {pageCount > 1 && (
               <ReactPaginate
                 pageCount={pageCount}
-                onPageChange={(e) => setCurrentPage(e.selected)}
+                onPageChange={(e) => {
+                  setCurrentPage(e.selected);
+                  window.scrollTo({ top: 0, behavior: "smooth" });
+                }}
                 previousLabel="Prev"
                 nextLabel="Next"
                 containerClassName="flex justify-center gap-3 mt-20"

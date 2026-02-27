@@ -32,9 +32,7 @@ const Navbar = () => {
   //scroll behave
 
   return (
-    <nav
-      className={`lg:py-3 shadow-sm sticky w-full top-0 z-1000 bg-white`}
-    >
+    <nav className={`lg:py-3 shadow-sm sticky w-full top-0 z-1000 bg-white`}>
       <Container>
         <div className="hidden lg:flex justify-between items-center">
           {/* Logo */}
@@ -174,14 +172,18 @@ const Navbar = () => {
                     onClick={() => setLogin(false)}
                   ></div>
                   <div className="absolute top-12 right-0 py-2 bg-secondary/50 rounded-sm border z-50">
-                    <div className="flex items-center gap-x-4 hover:bg-gray-100/30 text-center py-1 pl-4 pr-16 cursor-pointer">
-                      <FaUserGraduate className="text-white" />
-                      <PBase text={"Student"} className={" text-white"} />
-                    </div>
-                    <div className="flex items-center gap-x-4 hover:bg-gray-100/30 text-center py-1 pl-4 pr-16 cursor-pointer">
-                      <FaUserTie className="text-white" />
-                      <PBase text={"Agent"} className={" text-white"} />
-                    </div>
+                    <NavLink to={"login"}>
+                      <div className="flex items-center gap-x-4 hover:bg-gray-100/30 text-center py-1 pl-4 pr-16 cursor-pointer">
+                        <FaUserGraduate className="text-white" />
+                        <PBase text={"Student"} className={" text-white"} />
+                      </div>
+                    </NavLink>
+                    <NavLink to={"login"}>
+                      <div className="flex items-center gap-x-4 hover:bg-gray-100/30 text-center py-1 pl-4 pr-16 cursor-pointer">
+                        <FaUserTie className="text-white" />
+                        <PBase text={"Agent"} className={" text-white"} />
+                      </div>
+                    </NavLink>
                   </div>
                 </>
               )}
@@ -241,17 +243,21 @@ const Navbar = () => {
                     onClick={() => setLogin(false)}
                   ></div>
                   <div className="absolute top-6.5 right-0 bg-secondary/50 backdrop-blur-sm rounded-lg border shadow-xl py-2 z-50">
-                    <div className="flex items-center gap-x-4 hover:bg-gray-100/30 text-white py-1 px-5 cursor-pointer transition-all duration-200">
+                   <NavLink to={"login"}>
+                     <div className="flex items-center gap-x-4 hover:bg-gray-100/30 text-white py-1 px-5 cursor-pointer transition-all duration-200">
                       <FaUserGraduate className="text-sm md:text-md" />
                       <PBase
                         text="Student"
                         className="text-white font-medium"
                       />
                     </div>
-                    <div className="flex items-center gap-x-4 hover:bg-gray-100/30 text-white py-1 px-5 cursor-pointer transition-all duration-200">
+                   </NavLink>
+                    <NavLink to={"login"}>
+                      <div className="flex items-center gap-x-4 hover:bg-gray-100/30 text-white py-1 px-5 cursor-pointer transition-all duration-200">
                       <FaUserTie className="text-sm md:text-md" />
                       <PBase text="Agent" className="text-white font-medium" />
                     </div>
+                    </NavLink>
                   </div>
                   {/* <div className="absolute top-6.5 right-0 bg-secondary/50 backdrop-blur-sm rounded-lg border shadow-xl py-2">
                     <div className="flex items-center gap-x-4 hover:bg-gray-100/30 text-white py-1 px-5 cursor-pointer transition-all duration-200">

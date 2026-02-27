@@ -4,7 +4,6 @@ import { useNavigate } from "react-router";
 import { MdCopyAll } from "react-icons/md";
 
 const CardBlog = ({ id, slug, src, title, date, description, miniLogo }) => {
-  const [showLink, setShowLink] = useState(false);
   const [copied, setCopied] = useState(false);
   const navigate = useNavigate();
 

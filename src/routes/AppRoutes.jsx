@@ -8,6 +8,10 @@ import Blog from "../components/pages/Blog";
 import Contact from "../components/pages/Contact";
 import BlogDetails from "../components/layouts/blog/BlogDetails";
 import BecomeAPartner from "../components/pages/BecomeAPartner";
+import universityDetails from "../components/layouts/university/universityDetails";
+import LoginSignup from "../components/pages/Login";
+import Login from "../components/pages/Login";
+import Signup from "../components/pages/Signup";
 
 const AppRoutes = createBrowserRouter([
   {
@@ -44,6 +48,18 @@ const AppRoutes = createBrowserRouter([
         Component: BlogDetails,
       },
       {
+        path: "university/:id",
+        Component: universityDetails,
+      },
+      {
+        path: "login",
+        Component: Login,
+      },
+      {
+        path: "signup",
+        Component: Signup,
+      },
+      {
         path: "become-a-partner",
         Component: BecomeAPartner,
       },
@@ -51,4 +67,4 @@ const AppRoutes = createBrowserRouter([
   },
 ]);
 
-export default AppRoutes
+export default AppRoutes;
