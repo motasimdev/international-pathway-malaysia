@@ -48,7 +48,7 @@ const AppRoutes = createBrowserRouter([
         Component: BlogDetails,
       },
       {
-        path: "university/:id",
+        path: "university-details",
         Component: universityDetails,
       },
       {

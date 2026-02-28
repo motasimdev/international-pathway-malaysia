@@ -157,7 +157,7 @@ const University = ({id}) => {
                       {uni.name}
                     </h2>
                     <p className="italic text-white">{uni.description}</p>
-                    <p className=" text-white font-bold">
+                    <p className=" text-primary font-bold">
                       {uni.courses.map((c) => c.name).join(", ")}
                     </p>
 

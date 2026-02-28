@@ -41,7 +41,7 @@ const OurLeader = () => {
           {/* ============leader two========== */}
           <div className="md:flex justify-between">
             <div className="md:hidden md:w-[35%] mb-5 md:mb-0 h-50 md:h-70 lg:h-90 overflow-hidden bg-amber-100">
-              <img src={leaderOne} alt="" className="w-full h-full" />
+              <img src={leaderTwo} alt="" className="w-full h-full" />
             </div>
             <div className="md:w-[64%]">
               <h4 className="text-[27px] md:text-3xl font-bold">

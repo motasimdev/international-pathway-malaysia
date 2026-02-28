@@ -16,6 +16,7 @@ const universityDetails = () => {
           <PBase text={`${"id"}`} className={"cursor-pointer"} />
         </div>
         {/* ======= bradcumb ======= */}
+        
       </section>
     </>
   );
