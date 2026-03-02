@@ -9,7 +9,6 @@ import Contact from "../components/pages/Contact";
 import BlogDetails from "../components/layouts/blog/BlogDetails";
 import BecomeAPartner from "../components/pages/BecomeAPartner";
 import universityDetails from "../components/layouts/university/universityDetails";
-import LoginSignup from "../components/pages/Login";
 import Login from "../components/pages/Login";
 import Signup from "../components/pages/Signup";
 
@@ -48,7 +47,7 @@ const AppRoutes = createBrowserRouter([
         Component: BlogDetails,
       },
       {
-        path: "university-details",
+        path: "university-details/:id",
         Component: universityDetails,
       },
       {

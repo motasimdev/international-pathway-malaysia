@@ -5,16 +5,17 @@ import { FaMapMarkerAlt } from "react-icons/fa";
 import ReactPaginate from "react-paginate";
 import Select from "react-select";
 import makeAnimated from "react-select/animated";
-import { Link } from "react-router";
+import { Link, useNavigate } from "react-router";
 
 const animatedComponents = makeAnimated();
 const PER_PAGE = 10;
 
-const University = ({id}) => {
+const University = ({ id }) => {
   const [searchText, setSearchText] = useState("");
   const [searchType, setSearchType] = useState("course");
   const [currentPage, setCurrentPage] = useState(0);
   const [selectedDegrees, setSelectedDegrees] = useState([]);
+  const navigate = useNavigate();
 
   const filteredUniversities = useMemo(() => {
     // if (!searchText) return universitiesandcourses.universitiesandcourses;
@@ -169,12 +170,16 @@ const University = ({id}) => {
 
                   {/* Buttons */}
                   <div className="flex flex-col space-y-2 mt-4 md:mt-0 md:ml-4">
-                    <Link to={`/university/${id}`}>
-                      <button className="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600 cursor-pointer">
-                        Apply Now
-                      </button>
-                    </Link>
-                    <button className="bg-gray-200 px-4 py-2 rounded hover:bg-gray-300 cursor-pointer">
+                    <button className="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600 cursor-pointer">
+                      Apply Now
+                    </button>
+                    <button
+                      onClick={() =>{
+                        console.log("clicked" , uni.id)
+                         navigate(`/university-details/${uni.id}`)
+                      }}
+                      className="bg-gray-200 px-4 py-2 rounded hover:bg-gray-300 cursor-pointer"
+                    >
                       Details
                     </button>
                   </div>
