@@ -3,7 +3,7 @@ import Container from "../../Container";
 import { FaLongArrowAltRight } from "react-icons/fa";
 import round from "/src/assets/roundblur.svg";
 import { Link } from "react-router";
-import Handshake from "../../../assets/icons/handshake";
+import Handshake from "../../../assets/icons/Handshake.jsx";
 
 const BecomeAPartner = () => {
   return (
@@ -14,7 +14,7 @@ const BecomeAPartner = () => {
             <div className="hidden md:block absolute top-2 left-2 -rotate-45">
               <Handshake className={"size-40"}/>
             </div>
-            <p className="text-white font-extrabold text-3xl relative">
+            <p className="text-white font-extrabold text-3xl relative" style={{ textShadow: "0 0 8px rgba(14,165,233,0.7)" }}>
               Become A Partner
             </p>
             <div className="relative mt-5 md:mt-0 flex justify-center md:flex-none">
@@ -27,7 +27,7 @@ const BecomeAPartner = () => {
               <Link to={"/become-a-partner"}>
                 <button
                   className={
-                    "relative z-10 py-3 lg:py-3 px-3 lg:px-4 text-[12px] md:text-[14px] text-base font-medium lg:font-bold rounded-xl bg-secondary text-white cursor-pointer hover:text-blue-400 transition duration-300"
+                    "relative z-10 py-2.5 lg:py-3 px-3 lg:px-4 text-[12px] md:text-[14px] lg:text-base font-medium lg:font-extrabold rounded-xl bg-white text-secondary cursor-pointer hover:text-blue-400 transition duration-300"
                   }
                 >
                   <div className="flex items-center">
