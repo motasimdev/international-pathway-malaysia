@@ -27,7 +27,7 @@ const BecomeAPartner = () => {
               <Link to={"/become-a-partner"}>
                 <button
                   className={
-                    "relative z-10 py-2.5 lg:py-3 px-3 lg:px-4 text-[12px] md:text-[14px] lg:text-base font-medium lg:font-extrabold rounded-xl bg-white text-secondary cursor-pointer hover:text-blue-400 transition duration-300"
+                    "relative z-10 py-2.5 lg:py-3 px-3 lg:px-4 text-[12px] md:text-[14px] lg:text-base font-medium lg:font-extrabold rounded-xl bg-white text-secondary cursor-pointer hover:text-blue-400 transition duration-300 shadow-lg"
                   }
                 >
                   <div className="flex items-center">
