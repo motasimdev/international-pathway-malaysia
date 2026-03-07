@@ -10,7 +10,7 @@ const BecomeAPartner = () => {
     <>
       <section>
         <Container>
-          <div className="relative py-5 md:py-16 px-8 md:px-22 text-center md:text-left bg-primary rounded-2xl md:flex justify-between">
+          <div className="relative py-5 md:py-14 px-8 md:px-22 text-center md:text-left bg-primary rounded-2xl md:flex justify-between">
             <div className="hidden md:block absolute top-2 left-2 -rotate-45">
               <Handshake className={"size-40"}/>
             </div>
@@ -27,7 +27,7 @@ const BecomeAPartner = () => {
               <Link to={"/become-a-partner"}>
                 <button
                   className={
-                    "relative z-10 py-2.5 lg:py-3 px-3 lg:px-4 text-[12px] md:text-[14px] lg:text-base font-medium lg:font-extrabold rounded-xl bg-white text-secondary cursor-pointer hover:text-blue-400 transition duration-300 shadow-lg"
+                    "relative z-10 py-2.5 lg:py-2 px-3 lg:px-4 text-[12px] md:text-[14px] lg:text-base font-medium lg:font-extrabold rounded-xl bg-white text-secondary cursor-pointer hover:text-blue-400 transition duration-300 shadow-lg"
                   }
                 >
                   <div className="flex items-center">
