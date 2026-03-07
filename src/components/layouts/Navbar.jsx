@@ -36,22 +36,28 @@ const Navbar = () => {
       <Container>
         <div className="hidden lg:flex justify-between items-center">
           {/* Logo */}
-          <NavLink to={"/"} className="max-w-35 aspect-3/1">
-            <img src={logo} alt="logo" className="w-full h-full" />
+          <NavLink to={"/"} className="w-35 h-12.5 block">
+            <img
+              src={logo}
+              alt="International Pathway Malaysia"
+              className="w-full h-full"
+              loading="eager"
+              decoding="async"
+            />
           </NavLink>
           {/* Logo */}
 
           {/* Desktop Menu*/}
-          <div className="flex items-center gap-x-10">
-            <ul className="flex items-center space-x-2">
+          <div className="w-[60%] flex justify-end">
+            <ul className="flex items-center space-x-2 whitespace-nowrap">
               <li>
                 <NavLink
                   to="/"
                   className={({ isActive }) =>
-                    `px-3 py-2 font-bold text-base uppercase ${
+                    `px-3 py-2 font-bold text-base uppercase border-b-2 ${
                       isActive
                         ? " text-primary border-b-2 border-primary shadow-lg"
-                        : "text-secondary hover:text-primary  "
+                        : "text-secondary hover:text-primary border-transparent "
                     }`
                   }
                 >
@@ -63,10 +69,10 @@ const Navbar = () => {
                 <NavLink
                   to="/about-us"
                   className={({ isActive }) =>
-                    `px-3 py-2 font-bold text-base uppercase ${
+                    `px-3 py-2 font-bold text-base uppercase border-b-2 ${
                       isActive
                         ? " text-primary border-b-2 border-primary shadow-lg"
-                        : "text-secondary hover:text-primary  "
+                        : "text-secondary hover:text-primary border-transparent "
                     }`
                   }
                 >
@@ -78,10 +84,10 @@ const Navbar = () => {
                 <NavLink
                   to="/university"
                   className={({ isActive }) =>
-                    `px-3 py-2 font-bold text-base uppercase ${
+                    `px-3 py-2 font-bold text-base uppercase border-b-2 ${
                       isActive
                         ? " text-primary border-b-2 border-primary shadow-lg  "
-                        : "text-secondary hover:text-primary  "
+                        : "text-secondary hover:text-primary border-transparent "
                     }`
                   }
                 >
@@ -93,10 +99,10 @@ const Navbar = () => {
                 <NavLink
                   to="/our-services"
                   className={({ isActive }) =>
-                    `px-3 py-2 font-bold text-base uppercase ${
+                    `px-3 py-2 font-bold text-base uppercase border-b-2 ${
                       isActive
                         ? " text-primary border-b-2 border-primary shadow-lg  "
-                        : "text-secondary hover:text-primary  "
+                        : "text-secondary hover:text-primary border-transparent "
                     }`
                   }
                 >
@@ -108,10 +114,10 @@ const Navbar = () => {
                 <NavLink
                   to="/blogs"
                   className={({ isActive }) =>
-                    `px-3 py-2 font-bold text-base uppercase ${
+                    `px-3 py-2 font-bold text-base uppercase border-b-2 ${
                       isActive
                         ? " text-primary border-b-2 border-primary shadow-lg  "
-                        : "text-secondary hover:text-primary  "
+                        : "text-secondary hover:text-primary border-transparent "
                     }`
                   }
                 >
@@ -123,10 +129,10 @@ const Navbar = () => {
                 <NavLink
                   to="/contact"
                   className={({ isActive }) =>
-                    `px-3 py-2 font-bold text-base uppercase ${
+                    `px-3 py-2 font-bold text-base uppercase border-b-2 ${
                       isActive
                         ? " text-primary border-b-2 border-primary shadow-lg  "
-                        : "text-secondary hover:text-primary  "
+                        : "text-secondary hover:text-primary border-transparent "
                     }`
                   }
                 >
