@@ -68,7 +68,7 @@ const Banner = () => {
         <Container>
           <div className="relative md:flex justify-between items-center md:gap-x-8 lg:gap-x-0">
             <div className="md:w-[50%]">
-              <h1 className="text-4xl md:text-[40px] lg:text-[54px] lg:leading-16 lg:pr-23 text-secondary font-extrabold ">
+              <h1 className="text-4xl md:text-[40px] lg:text-[54px] leading-11 md:leading-13 lg:leading-16 lg:pr-23 text-secondary font-extrabold ">
                 Expert Guidance For{" "}
                 <span className="text-primary">International Students</span> In
                 Malaysia
@@ -94,11 +94,11 @@ const Banner = () => {
 
             {/* ======================================= */}
             <div className=" md:w-[50%] mt-4 md:mt-0">
-              <div className="md:flex gap-x-7">
+              <div className="md:flex md:gap-x-4 lg:gap-x-7">
                 <div className="md:w-[45%] flex flex-col gap-y-3">
                   {/* ==============box one======== */}
                   <div className="flex justify-center py-4 md:py-5 md:px-8 bg-secondary rounded-xl">
-                    <div className="size-9 md:size-14 rounded-full bg-white flex items-center justify-center">
+                    <div className="size-9 md:size-14 rounded-full bg-white flex items-center justify-center shrink-0">
                       <RiGraduationCapFill className="text-secondary text-2xl md:text-4xl " />
                     </div>
                     <div className="ml-5">
@@ -122,14 +122,17 @@ const Banner = () => {
                   {/* ==============box one======== */}
 
                   {/* ==============box two======== */}
-                  <div className="bg-[#b5b5f8] pt-2 md:pt-2.5 px-2 md:px-4 pb-3 md:pb-5 rounded-xl flex flex-col gap-y-2 shadow-[0px_5px_8px_-2px_rgba(0,0,0,0.3)]">
-                    <picture>
+                  <div className="bg-[#b5b5f8] pt-2 md:pt-2.5 px-2 md:px-3 lg:px-4 pb-3 md:pb-5 rounded-xl flex flex-col gap-y-2 shadow-[0px_5px_8px_-2px_rgba(0,0,0,0.3)]">
+                    <div className="w-full h-54 md:h-30 lg:h-40">
                       <img
                         src={grpStudy}
                         alt="group study"
-                        className="w-full rounded-xl"
+                        className="w-full h-full rounded-xl"
+                        loading="eager"
+                        decoding="async"
+                        fetchpriority="high"
                       />
-                    </picture>
+                    </div>
                     <div className="bg-primary rounded-xl px-3 md:px-4 py-2 md:pt-4 md:pb-2 text-center md:text-left">
                       <p
                         className={"text-white font-medium text-xl md:text-2xl"}
@@ -148,17 +151,20 @@ const Banner = () => {
 
                 {/* ================================ */}
                 <div className="md:w-[40%] flex flex-col gap-y-4">
-                  <picture>
+                  <div className="w-full h-76 md:h-42 lg:h-56">
                     <img
                       src={university}
                       alt="group study"
-                      className="w-full rounded-xl"
+                      className="w-full h-full rounded-xl"
+                      loading="eager"
+                      decoding="async"
+                      fetchpriority="high"
                     />
-                  </picture>
+                  </div>
                   {/* ============= */}
-                  <div className="flex justify-center py-4 md:py-5 md:px-8 bg-primary rounded-xl shadow-[0px_5px_8px_-2px_rgba(0,0,0,0.3)]">
-                    <div className="size-9 md:size-14 rounded-full bg-white flex items-center justify-center">
-                      <RiGraduationCapFill className="text-secondary text-2xl md:text-4xl " />
+                  <div className="flex justify-center py-4 md:py-5 md:px-5 lg:px-8 bg-primary rounded-xl shadow-[0px_5px_8px_-2px_rgba(0,0,0,0.3)]">
+                    <div className="size-9 md:size-11 lg:size-14 rounded-full bg-white grid place-items-center shrink-0">
+                      <RiGraduationCapFill className="text-secondary text-2xl md:text-3xl lg:text-4xl" />
                     </div>
                     <div className="ml-5">
                       <PBase
