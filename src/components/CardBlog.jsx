@@ -27,6 +27,8 @@ const CardBlog = ({ id, slug, src, title, date, description, miniLogo }) => {
           src={src}
           alt="Blog"
           className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-110"
+          loading="lazy"
+          decoding="async"
         />
       </div>
 
@@ -47,7 +49,15 @@ const CardBlog = ({ id, slug, src, title, date, description, miniLogo }) => {
         {/* Meta Info */}
         <div className="mb-3 flex items-center justify-between text-xs text-gray-500">
           <div className="flex items-center gap-2">
-            <img src={miniLogo} alt="logo" className="h-10 w-10 rounded-full" />
+            <div className="h-10 w-10 ">
+              <img
+                src={miniLogo}
+                alt="logo"
+                className="h-full w-full rounded-full"
+                loading="lazy"
+                decoding="async"
+              />
+            </div>
             <FaCalendarAlt size={14} />
             <span>{date}</span>
           </div>
@@ -70,7 +80,11 @@ const CardBlog = ({ id, slug, src, title, date, description, miniLogo }) => {
 
               {/* <MdCopyAll /> */}
             </button>
-            {copied && <span className="absolute bottom-5 right-0 ml-2 text-xs text-gray-400">Copied!</span>}
+            {copied && (
+              <span className="absolute bottom-5 right-0 ml-2 text-xs text-gray-400">
+                Copied!
+              </span>
+            )}
             {/* </div>
             )} */}
           </div>

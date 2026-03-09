@@ -92,11 +92,13 @@ const OurServices = () => {
                   item.id === active.id && (
                     <div key={item.id} className="grid gap-y-3 items-center">
                       {/* IMAGE */}
-                      <div className="w-auto md:w-80 lg:w-80 overflow-hidden mx-auto">
+                      <div className="h-90 w-80 overflow-hidden mx-auto">
                         <img
                           src={item.image}
                           alt={item.title}
                           className="w-full h-full object-cover rounded-2xl"
+                          loading="lazy"
+                          decoding="async"
                         />
                       </div>
 
@@ -147,11 +149,13 @@ const OurServices = () => {
           {/* RIGHT CONTENT */}
           <div className="md:hidden mt-8">
             <div className="">
-              <div className="h-70">
+              <div className="h-80 w-full">
                 <img
                   src={active.image}
                   alt={active.title}
                   className="rounded-2xl w-full h-full object-cover"
+                   loading="lazy"
+                  decoding="async"
                 />
               </div>
 

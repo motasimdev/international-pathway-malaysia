@@ -26,6 +26,8 @@ const YourJuorney = () => {
                   src={journeyOne}
                   alt=""
                   className="w-full h-full object-cover"
+                  loading="lazy"
+                  decoding="async"
                 />
               </div>
             </div>
@@ -66,7 +68,12 @@ const YourJuorney = () => {
               </div>
               <div className="relative w-17 h-17 md:w-40 md:h-40 lg:w-60 lg:h-60 rounded-full bg-yellow-100 z-10">
                 <div className="w-full h-full rounded-full overflow-hidden">
-                  <img src={journeyTwo} alt="" />
+                  <img
+                    src={journeyTwo}
+                    alt=""
+                    loading="lazy"
+                    decoding="async"
+                  />
                 </div>
               </div>
             </div>
@@ -81,6 +88,8 @@ const YourJuorney = () => {
                     src={journeyThree}
                     alt=""
                     className="w-full h-full object-cover"
+                    loading="lazy"
+                    decoding="async"
                   />
                 </div>
               </div>

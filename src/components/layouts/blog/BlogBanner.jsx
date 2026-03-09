@@ -29,7 +29,15 @@ const BlogBanner = () => {
               />
             </div>
             <div className="md:w-[50%] overflow-hidden">
-              <img src={blogImage} alt="Blog" className="w-full h-full"/>
+              <div className="w-full h-70 md:h-80 lg:h-90">
+                <img
+                  src={blogImage}
+                  alt="Blog"
+                  className="w-full h-full object-cover"
+                  loading="lazy"
+                  decoding="async"
+                />
+              </div>
             </div>
           </div>
         </Container>

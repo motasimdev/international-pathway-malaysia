@@ -13,9 +13,15 @@ const About = () => {
         <Container>
           <div className="md:flex justify-between items-center">
             <div className="md:w-[50%] pb-3 md:pb-0">
-              <picture>
-                <img src={about} alt="about" className="w-full" />
-              </picture>
+              <div className="w-full h-50 md:h-80 lg:h-110 ">
+                <img
+                  src={about}
+                  alt="about"
+                  className="w-full h-full"
+                  loading="lazy"
+                  decoding="async"
+                />
+              </div>
             </div>
             <div className="md:w-[45%]">
               <h3 className="text-secondary text-[32px] md:text-4xl leading-8 lg:leading-11 font-bold lg:pr-30 text-center md:text-left py-3 md:py-0">
@@ -36,7 +42,7 @@ const About = () => {
                 className={"lg:pr-20 py-3 lg:py-5 text-justify"}
               />
               <div className="w-full flex justify-center md:justify-normal">
-                <NavLink to={"become-a-partner"}> 
+                <NavLink to={"become-a-partner"}>
                   <Button className={"font-bold"}>Book Your Appointment</Button>
                 </NavLink>
               </div>

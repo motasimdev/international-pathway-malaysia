@@ -7,7 +7,6 @@ const About = () => {
     <>
     <AboutHeader/>  
     <AboutMission/>
-    {/* <OurLeader/> */}
     </>
   )
 }

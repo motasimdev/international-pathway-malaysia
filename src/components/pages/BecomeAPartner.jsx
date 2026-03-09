@@ -121,11 +121,11 @@ const BecomeAPartner = () => {
         },
       });
 
-    //   if (res.data.success) {
-    //     toast.success(res.data.message || "Successfully Submited!");
-    //   } else {
-    //     toast.error(res.data.message || "Something went wrong!");
-    //   }
+      //   if (res.data.success) {
+      //     toast.success(res.data.message || "Successfully Submited!");
+      //   } else {
+      //     toast.error(res.data.message || "Something went wrong!");
+      //   }
 
       toast.success("Successfully Submited!", {
         position: "top-center",
@@ -171,11 +171,13 @@ const BecomeAPartner = () => {
       <section className="py-5 lg:py-10 ">
         <Container>
           <div className="flex flex-col gap-y-5 md:flex-row justify-between">
-            <div className="md:w-[35%] flex flex-col gap-y-5 lg:h-140">
+            <div className="md:w-[35%] flex flex-col gap-y-5 w-full h-60 md:h-100 lg:h-140">
               <img
                 src={partnerImage}
                 alt="Become a partner"
                 className="w-full h-full object-cover"
+                loading="lazy"
+                decoding="async"
               />
             </div>
 
@@ -185,9 +187,7 @@ const BecomeAPartner = () => {
               <div className="p-7 bg-secondary rounded-xl">
                 <Heading text={"Become a Partner"} className={"text-white"} />
                 <PBase
-                  text={
-                    "Fill up the form below and submit to become a Partner"
-                  }
+                  text={"Fill up the form below and submit to become a Partner"}
                   className={"text-white pt-3"}
                 />
                 <div className="max-w-4xl mx-auto px-4 mt-8">

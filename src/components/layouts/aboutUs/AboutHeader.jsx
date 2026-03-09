@@ -4,10 +4,10 @@ import Heading from "../../Heading";
 import Button from "../../Button";
 import PBase from "../../PBase";
 import { Link } from "react-router";
-import aboutOne from '/src/assets/aboutOne.svg'
-import aboutTwo from '/src/assets/aboutTwosvg.svg'
-import aboutThree from '/src/assets/aboutThree.svg'
-import aboutFour from '/src/assets/aboutFour.svg'
+import aboutOne from "/src/assets/aboutOne.svg";
+import aboutTwo from "/src/assets/aboutTwosvg.svg";
+import aboutThree from "/src/assets/aboutThree.svg";
+import aboutFour from "/src/assets/aboutFour.svg";
 
 const AboutHeader = () => {
   return (
@@ -36,16 +36,40 @@ const AboutHeader = () => {
           {/* ===================================== */}
           <div className="flex justify-between items-baseline mt-5 md:mt-9 lg:mt-0">
             <div className="w-[25%] h-27 md:h-auto rounded-2xl bg-amber-100">
-                <img src={aboutThree} alt="" className="w-full h-full object-cover"/>
+              <img
+                src={aboutThree}
+                alt=""
+                className="w-full h-full object-cover"
+                loading="lazy"
+                decoding="async"
+              />
             </div>
             <div className="w-[23%] rounded-2xl md:h-43 lg:h-50 bg-amber-100">
-                <img src={aboutOne} alt="" className="w-full h-full object-cover"/>
+              <img
+                src={aboutOne}
+                alt=""
+                className="w-full h-full object-cover"
+                loading="lazy"
+                decoding="async"
+              />
             </div>
             <div className="w-[23%] rounded-2xl h-23 md:h-52 lg:h-60 bg-amber-100">
-                <img src={aboutFour} alt="" className="w-full h-full object-cover"/>
+              <img
+                src={aboutFour}
+                alt=""
+                className="w-full h-full object-cover"
+                loading="lazy"
+                decoding="async"
+              />
             </div>
             <div className="w-[25%] h-27 md:h-auto rounded-2xl bg-amber-100">
-                <img src={aboutTwo} alt="" className="w-full h-full object-cover"/>
+              <img
+                src={aboutTwo}
+                alt=""
+                className="w-full h-full object-cover"
+                loading="lazy"
+                decoding="async"
+              />
             </div>
           </div>
         </Container>
