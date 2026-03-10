@@ -294,7 +294,6 @@ const BecomeAPartner = () => {
                       </div>
                     </div> */}
                     {/* =========== university checkbox ====== */}
-
                     {/* =====field====== */}
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
                       {/* NID / Passport */}

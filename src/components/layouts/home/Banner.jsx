@@ -12,7 +12,6 @@ import LINCOLN from "/src/assets/university-logos/logo.webp";
 import UNIRAZAK from "/src/assets/university-logos/Official-UNIRAZAK-Logo.png";
 import SEGI from "/src/assets/university-logos/SEGi-University.png";
 import UOW from "/src/assets/university-logos/UOW-logoo.png";
-import video from "/src/assets/video/home-video-gus.mp4";
 import Psm from "../../Psm";
 
 import Marquee from "react-fast-marquee";

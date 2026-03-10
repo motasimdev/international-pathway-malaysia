@@ -115,20 +115,20 @@ const ContactFormAddress = () => {
           <div className="flex flex-col gap-y-5 md:flex-row justify-between">
             <div className="md:w-[35%] flex flex-col gap-y-5">
               {/* ============ location box ========= */}
-              <div className="p-10 bg-secondary rounded-xl">
+              <div className="p-10 bg-tertiary rounded-xl">
                 <div className="flex items-center gap-x-6">
-                  <div className="py-1.5 px-1.5 bg-primary rounded-full">
-                    <IoLocationOutline className="text-white text-[40px]" />
+                  <div className="py-1.5 px-1.5 bg-white rounded-full">
+                    <IoLocationOutline className="text-secondary text-[40px]" />
                   </div>
                   <div className="">
-                    <h5 className="text-xl font-bold text-white pb-2">
+                    <h5 className="text-xl font-bold text-secondary pb-2">
                       Malaysia Head Office
                     </h5>
                     <PBase
                       text={
                         "1, B-G-26 Block B,Merchant Square@Tropicana selatan, Bandar Utama, 47410 Petaling Jaya, Selangor, Malaysia"
                       }
-                      className={" text-white"}
+                      className={" text-secondary"}
                     />
                   </div>
                 </div>
@@ -136,32 +136,32 @@ const ContactFormAddress = () => {
               {/* ============ location box ========= */}
 
               {/* ============ phone box ========= */}
-              <div className="p-10 bg-secondary rounded-xl">
+              <div className="p-10 bg-tertiary rounded-xl">
                 <div className="flex items-center gap-x-6">
-                  <div className="py-3 px-3 bg-primary rounded-full">
-                    <FiPhoneCall className="text-white text-[32px]" />
+                  <div className="py-3 px-3 bg-white rounded-full">
+                    <FiPhoneCall className="text-secondary text-[32px]" />
                   </div>
                   <div className="">
-                    <h5 className="text-xl font-bold text-white">Phone</h5>
-                    <PBase text={"+60 13-9247 098"} className={" text-white"} />
+                    <h5 className="text-xl font-bold text-secondary">Phone</h5>
+                    <PBase text={"+60 13-9247 098"} className={" text-secondary"} />
                   </div>
                 </div>
               </div>
               {/* ============ phone box ========= */}
 
               {/* ============ email box ========= */}
-              <div className="p-10 bg-secondary rounded-xl">
+              <div className="p-10 bg-tertiary rounded-xl">
                 <div className="flex items-center gap-x-6">
-                  <div className="py-2 px-2 bg-primary rounded-full">
-                    <MdOutlineMailOutline className="text-white text-[36px]" />
+                  <div className="py-2 px-2 bg-white rounded-full">
+                    <MdOutlineMailOutline className="text-secondary text-[36px]" />
                   </div>
                   <div className="">
-                    <h5 className="text-xl font-bold text-white">
+                    <h5 className="text-xl font-bold text-secondary">
                       E-mail Address
                     </h5>
                     <PBase
                       text={"info@ipathwaymy.com"}
-                      className={" text-white"}
+                      className={" text-secondary"}
                     />
                   </div>
                 </div>
