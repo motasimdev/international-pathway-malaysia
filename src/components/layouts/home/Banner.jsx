@@ -133,7 +133,7 @@ const Banner = () => {
                         className="w-full h-full rounded-xl"
                         loading="eager"
                         decoding="async"
-                        fetchpriority="high"
+                        fetchPriority="high"
                       />
                     </div>
                     <div className="bg-primary rounded-xl px-3 md:px-4 py-2 md:pt-4 md:pb-2 text-center md:text-left">
@@ -161,7 +161,7 @@ const Banner = () => {
                       className="w-full h-full rounded-xl"
                       loading="eager"
                       decoding="async"
-                      fetchpriority="high"
+                      fetchPriority="high"
                     />
                   </div>
                   {/* ============= */}
