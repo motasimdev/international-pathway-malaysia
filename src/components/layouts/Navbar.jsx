@@ -41,7 +41,7 @@ const Navbar = () => {
               src={logo}
               alt="International Pathway Malaysia"
               className="w-full h-full"
-              loading="eager"
+              loading="lazy"
               decoding="async"
             />
           </NavLink>
