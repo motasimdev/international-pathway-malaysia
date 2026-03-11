@@ -1,13 +1,13 @@
 import React from "react";
 import ContactFormAddress from "../layouts/contact/ContactFormAddress";
-import BecomeAPartner from "../layouts/home/BecomeAPartner";
+import BecomeAPartnerSection from "../layouts/home/BecomeAPartnerSection";
 
 
 const Contact = () => {
   return (
     <>
       <ContactFormAddress/>
-      <BecomeAPartner/>
+      <BecomeAPartnerSection/>
     </>
   );
 };

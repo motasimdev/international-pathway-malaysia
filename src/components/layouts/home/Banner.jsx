@@ -197,11 +197,13 @@ const Banner = () => {
         <Marquee speed={80} gradient={false} pauseOnHover={true}>
           {university_logo.map((uni, index) => (
             <div key={index} className="mx-10 flex items-center justify-center">
-              <img
-                src={uni.logo}
-                alt={uni.name}
-                className={`h-12 object-contain`}
-              />
+              <div className="h-12">
+                <img
+                  src={uni.logo}
+                  alt={uni.name}
+                  className={`h-full object-contain`}
+                />
+              </div>
             </div>
           ))}
         </Marquee>

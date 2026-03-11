@@ -1,11 +1,11 @@
 import React from "react";
-import Container from "../../Container";
+import Container from "../../Container.jsx";
 import { FaLongArrowAltRight } from "react-icons/fa";
 import round from "/src/assets/roundblur.svg";
 import { Link } from "react-router";
 import Handshake from "../../../assets/icons/Handshake.jsx";
 
-const BecomeAPartner = () => {
+const BecomeAPartnerSection = () => {
   return (
     <>
       <section>
@@ -44,4 +44,4 @@ const BecomeAPartner = () => {
   );
 };
 
-export default BecomeAPartner;
+export default BecomeAPartnerSection;

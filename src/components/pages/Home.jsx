@@ -2,9 +2,7 @@ import Banner from "../layouts/home/Banner";
 import About from "../layouts/home/About";
 import YourJuorney from "../layouts/home/YourJuorney";
 import OurPartnersU from "../layouts/home/OurPartnersU";
-import BecomeAPartner from "../layouts/home/BecomeAPartner";
-import Loader from "./Loader";
-import { useEffect, useState } from "react";
+import BecomeAPartnerSection from "../layouts/home/BecomeAPartnerSection";
 
 const Home = () => {
   return (
@@ -13,7 +11,7 @@ const Home = () => {
       <About />
       <YourJuorney />
       <OurPartnersU />
-      <BecomeAPartner />
+      <BecomeAPartnerSection/>
     </>
   );
 };

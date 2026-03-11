@@ -6,7 +6,7 @@ import P18 from "../../P18";
 import Button from "../../Button";
 import { NavLink } from "react-router";
 
-const About = () => {
+const AboutSection = () => {
   return (
     <>
       <section className="pt-18 md:pt-30 pb-18 md:pb-20 lg:py-30">
@@ -54,4 +54,4 @@ const About = () => {
   );
 };
 
-export default About;
+export default AboutSection;
