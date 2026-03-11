@@ -1,4 +1,4 @@
-import logo from '/src/assets/logo copy.jpeg'
+
 
 const Loader = () => {
   return (

@@ -28,18 +28,22 @@ const Banner = () => {
   };
   //counter up
 
-  const universities = [
-    { value: "um", label: "University of Malaya (UM)" },
-    { value: "utm", label: "Universiti Teknologi Malaysia (UTM)" },
-    { value: "upm", label: "Universiti Putra Malaysia (UPM)" },
-    { value: "ukm", label: "Universiti Kebangsaan Malaysia (UKM)" },
-    { value: "usm", label: "Universiti Sains Malaysia (USM)" },
-    { value: "uim", label: "International Islamic University Malaysia (IIUM)" },
-    { value: "monash-my", label: "Monash University Malaysia" },
-    { value: "taylor", label: "Taylor’s University" },
-    { value: "sunway", label: "Sunway University" },
-    { value: "apu", label: "Asia Pacific University (APU)" },
-  ];
+  //react select
+
+  // const universities = [
+  //   { value: "um", label: "University of Malaya (UM)" },
+  //   { value: "utm", label: "Universiti Teknologi Malaysia (UTM)" },
+  //   { value: "upm", label: "Universiti Putra Malaysia (UPM)" },
+  //   { value: "ukm", label: "Universiti Kebangsaan Malaysia (UKM)" },
+  //   { value: "usm", label: "Universiti Sains Malaysia (USM)" },
+  //   { value: "uim", label: "International Islamic University Malaysia (IIUM)" },
+  //   { value: "monash-my", label: "Monash University Malaysia" },
+  //   { value: "taylor", label: "Taylor’s University" },
+  //   { value: "sunway", label: "Sunway University" },
+  //   { value: "apu", label: "Asia Pacific University (APU)" },
+  // ];
+
+  //react select
 
   const university_logo = [
     { name: "APU", logo: APU },
