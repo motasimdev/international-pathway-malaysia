@@ -15,10 +15,14 @@ const Footer = () => {
         <Container>
           <div className="">
             {/* Logo */}
-            <NavLink to={"/"} className={"flex justify-center"}>
-              <picture>
-                <img src={logo} alt="logo" className="w-30 lg:w-35" />
-              </picture>
+            <NavLink to={"/"} className="w-35 h-12.5 block mx-auto">
+              <img
+                src={logo}
+                alt="International Pathway Malaysia"
+                className="w-full h-full"
+                loading="lazy"
+                decoding="async"
+              />
             </NavLink>
             {/* Logo */}
 
@@ -29,7 +33,7 @@ const Footer = () => {
                   <PBase
                     text={"Home"}
                     className={
-                      "font-medium text-secondary hover:text-primary transition duration-300"
+                      "font-semibold text-secondary hover:text-primary transition duration-300"
                     }
                   />
                 </NavLink>
@@ -39,7 +43,7 @@ const Footer = () => {
                   <PBase
                     text={"About Us"}
                     className={
-                      "font-medium text-secondary hover:text-primary transition duration-300"
+                      "font-semibold text-secondary hover:text-primary transition duration-300"
                     }
                   />
                 </NavLink>
@@ -49,7 +53,7 @@ const Footer = () => {
                   <PBase
                     text={"Universities"}
                     className={
-                      "font-medium text-secondary hover:text-primary transition duration-300"
+                      "font-semibold text-secondary hover:text-primary transition duration-300"
                     }
                   />
                 </NavLink>
@@ -59,7 +63,7 @@ const Footer = () => {
                   <PBase
                     text={"Our Services"}
                     className={
-                      "font-medium text-secondary hover:text-primary transition duration-300"
+                      "font-semibold text-secondary hover:text-primary transition duration-300"
                     }
                   />
                 </NavLink>
@@ -69,7 +73,7 @@ const Footer = () => {
                   <PBase
                     text={"Blog"}
                     className={
-                      "font-medium text-secondary hover:text-primary transition duration-300"
+                      "font-semibold text-secondary hover:text-primary transition duration-300"
                     }
                   />
                 </NavLink>
@@ -79,7 +83,7 @@ const Footer = () => {
                   <PBase
                     text={"Contact"}
                     className={
-                      "font-medium text-secondary hover:text-primary transition duration-300"
+                      "font-semibold text-secondary hover:text-primary transition duration-300"
                     }
                   />
                 </NavLink>
@@ -89,7 +93,10 @@ const Footer = () => {
 
             {/* =========icon list========== */}
             <div className="flex items-center justify-center gap-x-3 pt-2 pb-8 lg:pb-15">
-              <NavLink to={"https://www.facebook.com/profile.php?id=61588417710246"} target="_blank">
+              <NavLink
+                to={"https://www.facebook.com/profile.php?id=61588417710246"}
+                target="_blank"
+              >
                 <div className="group hover:bg-gray-300 hover:-translate-y-1 transition duration-300 py-3 px-3 bg-secondary rounded-full ">
                   <FaFacebookF className="text-white group-hover:text-primary transition duration-300" />
                 </div>
@@ -114,7 +121,6 @@ const Footer = () => {
           </div>
         </Container>
         <div className="py-3 bg-secondary w-full text-center">
-          <Psm text={""} />
           <Psm
             text={
               " ©2026 All Rights Reserved By International Pathway Malaysia"
