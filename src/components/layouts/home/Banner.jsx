@@ -57,21 +57,10 @@ const Banner = () => {
   return (
     <>
       <section className="relative bg-linear-to-b from-tertiary to-[#e6e6ec] pt-15 pb-5 md:pb-20 lg:pt-20 lg:pb-30">
-        {/* =======video======== */}
-        {/* <video
-          className="absolute inset-0 w-full h-full object-cover"
-          src="/src/assets/video/home-video-gus.mp4"
-          autoPlay
-          loop
-          muted
-          playsInline
-        /> */}
-        {/* <div className="absolute inset-0 bg-black/50"></div> */}
-        {/* =======video======== */}
         <Container>
           <div className="relative md:flex justify-between items-center md:gap-x-8 lg:gap-x-0">
             <div className="md:w-[50%]">
-              <h1 className="text-4xl md:text-[40px] lg:text-[54px] leading-11 md:leading-13 lg:leading-16 lg:pr-23 text-secondary font-extrabold ">
+              <h1 className="text-4xl md:text-[40px] lg:text-[54px] leading-11 md:leading-13 lg:leading-16 lg:pr-23 text-secondary font-extrabold">
                 Expert Guidance For{" "}
                 <span className="text-primary">International Students</span> In
                 Malaysia
