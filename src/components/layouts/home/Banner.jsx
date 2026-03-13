@@ -60,7 +60,7 @@ const Banner = () => {
         <Container>
           <div className="relative md:flex justify-between items-center md:gap-x-8 lg:gap-x-0">
             <div className="md:w-[50%]">
-              <h1 className="text-4xl md:text-[40px] lg:text-[54px] leading-11 md:leading-13 lg:leading-16 lg:pr-23 text-secondary font-extrabold">
+              <h1 className="text-4xl md:text-[40px] lg:text-[54px] leading-11 md:leading-13 lg:leading-16 lg:pr-23 text-secondary font-extrabold animate-in fade-in slide-in-from-top-8 duration-700">
                 Expert Guidance For{" "}
                 <span className="text-primary">International Students</span> In
                 Malaysia

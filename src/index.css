@@ -1,11 +1,17 @@
 @import "tailwindcss";
+@import "tw-animate-css";
+
+html {
+  scroll-behavior: smooth;
+}
 
 body {
   font-family: "Roboto", sans-serif;
 }
 
+
 @theme {
-  --color-primary: #F21A1F;
+  --color-primary: #f21a1f;
   --color-secondary: #222262;
   --color-tertiary: #d5d5ff;
   /* ==================================== */

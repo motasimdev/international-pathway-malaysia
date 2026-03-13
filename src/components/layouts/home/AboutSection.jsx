@@ -13,7 +13,7 @@ const AboutSection = () => {
         <Container>
           <div className="md:flex justify-between items-center">
             <div className="md:w-[50%] pb-3 md:pb-0">
-              <div className="w-full h-50 md:h-80 lg:h-110 ">
+              <div className="w-full h-50 md:h-80 lg:h-110">
                 <img
                   src={about}
                   alt="about"
