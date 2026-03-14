@@ -5,12 +5,9 @@ import PBase from "../../PBase";
 import P18 from "../../P18";
 import Button from "../../Button";
 import { NavLink } from "react-router";
-import { useInView } from "../../../hooks/useInView";
-import { cn } from "../../../utils/cn";
 import ViewportAnimation from "../../ViewportAnimation";
 
 const AboutSection = () => {
-  const [ref, isInView] = useInView();
   return (
     <>
       <section className="pt-18 md:pt-30 pb-18 md:pb-20 lg:py-30">
@@ -20,15 +17,10 @@ const AboutSection = () => {
               <ViewportAnimation
                 from="-translate-y-8 md:-translate-x-11 md:translate-y-0 opacity-50"
                 duration={800}
-                once={false}
+                once={true}
                 delay={200}
               >
-                <div
-                  ref={ref}
-                  className={cn(
-                    "w-full h-50 md:h-80 lg:h-110 transition-all duration-700",
-                  )}
-                >
+                <div className={"w-full h-50 md:h-80 lg:h-110"}>
                   <img
                     src={about}
                     alt="about"
@@ -41,9 +33,9 @@ const AboutSection = () => {
             </div>
             <div className="md:w-[45%]">
               <ViewportAnimation
-                from="-translate-y-8 md:translate-x-11 md:translate-y-0 opacity-50"
+                from="-translate-y-8 md:translate-x-11 md:translate-y-0 opacity-0"
                 duration={1000}
-                once={false}
+                once={true}
                 delay={200}
               >
                 <h3 className="text-secondary text-[32px] md:text-4xl leading-8 lg:leading-11 font-bold lg:pr-30 text-center md:text-left py-3 md:py-0">
@@ -51,9 +43,9 @@ const AboutSection = () => {
                 </h3>
               </ViewportAnimation>
               <ViewportAnimation
-                from="-translate-y-8 md:translate-x-11 md:translate-y-0 opacity-50"
+                from="-translate-x-8 md:translate-x-11 md:translate-y-0 opacity-0"
                 duration={1000}
-                once={false}
+                once={true}
                 delay={200}
               >
                 <PBase
@@ -66,9 +58,9 @@ const AboutSection = () => {
                 />
               </ViewportAnimation>
               <ViewportAnimation
-                from="-translate-y-8 md:translate-x-11 md:translate-y-0 opacity-50"
+                from="translate-x-8 md:translate-x-11 md:translate-y-0 opacity-0"
                 duration={1000}
-                once={false}
+                once={true}
                 delay={200}
               >
                 <P18
@@ -81,7 +73,7 @@ const AboutSection = () => {
               <ViewportAnimation
                 from="-translate-y-2 md:-translate-y-3 md:translate-x-0"
                 duration={1000}
-                once={false}
+                once={true}
                 delay={200}
               >
                 <div className="w-full flex justify-center md:justify-normal">
