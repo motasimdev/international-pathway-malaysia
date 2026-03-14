@@ -1,4 +1,5 @@
-import React, { useState } from "react";
+import { useInView } from "../../../hooks/useInView";
+import { cn } from "../../../utils/cn";
 import Container from "../../Container";
 import Select from "react-select";
 import { RiGraduationCapFill } from "react-icons/ri";
@@ -18,6 +19,7 @@ import Marquee from "react-fast-marquee";
 import CountUp from "react-countup";
 
 const Banner = () => {
+  const [ref, isInView] = useInView({once:true})
   //counter up
   const onComplete = () => {
     console.log("Completed");
@@ -86,7 +88,7 @@ const Banner = () => {
 
             {/* ======================================= */}
             <div className=" md:w-[50%] mt-4 md:mt-0">
-              <div className="md:flex md:gap-x-4 lg:gap-x-7">
+              <div className="md:flex justify-end md:gap-x-4 lg:gap-x-7">
                 <div className="md:w-[45%] flex flex-col gap-y-3">
                   {/* ==============box one======== */}
                   <div className="flex justify-center py-4 md:py-5 md:px-8 bg-secondary rounded-xl">

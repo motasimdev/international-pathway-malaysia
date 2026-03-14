@@ -5,15 +5,25 @@ import PBase from "../../PBase";
 import P18 from "../../P18";
 import Button from "../../Button";
 import { NavLink } from "react-router";
+import { useInView } from "../../../hooks/useInView";
+import { cn } from "../../../utils/cn";
+import ViewportAnimation from "../../ViewportAnimation";
 
 const AboutSection = () => {
+  const [ref, isInView] = useInView();
   return (
     <>
       <section className="pt-18 md:pt-30 pb-18 md:pb-20 lg:py-30">
         <Container>
           <div className="md:flex justify-between items-center">
             <div className="md:w-[50%] pb-3 md:pb-0">
-              <div className="w-full h-50 md:h-80 lg:h-110">
+              <div
+                ref={ref}
+                className={cn(
+                  "w-full h-50 md:h-80 lg:h-110 transition-all duration-700",
+                  isInView && "animate-in fade-in slide-in-from-top-8",
+                )}
+              >
                 <img
                   src={about}
                   alt="about"
@@ -24,9 +34,11 @@ const AboutSection = () => {
               </div>
             </div>
             <div className="md:w-[45%]">
-              <h3 className="text-secondary text-[32px] md:text-4xl leading-8 lg:leading-11 font-bold lg:pr-30 text-center md:text-left py-3 md:py-0">
-                The Trusted Partner for Your Study Abroad Success
-              </h3>
+              <ViewportAnimation from="-translate-y-8 md:translate-x-11 md:translate-y-0 opacity-0" duration={800} once={false} delay={200}>
+                <h3 className="text-secondary text-[32px] md:text-4xl leading-8 lg:leading-11 font-bold lg:pr-30 text-center md:text-left py-3 md:py-0">
+                  The Trusted Partner for Your Study Abroad Success
+                </h3>
+              </ViewportAnimation>
               <PBase
                 text={
                   "Empowering your future with the world’s most trusted higher education specialist"
