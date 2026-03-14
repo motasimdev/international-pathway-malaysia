@@ -5,7 +5,6 @@ import { cn } from "../utils/cn";
 const ViewportAnimation = ({
   children,
   from = "",
-  animation = "fade-in",
   duration = 700,
   delay = 0,
   className = "",
@@ -19,7 +18,7 @@ const ViewportAnimation = ({
       className={cn(
         "transition-all",
         isInView
-          ? "opacity-100 translate-y-0 translate-x-0 scale-100 blur-0"
+          ? "opacity-100 translate-y-0 translate-x-0 scale-100 blur-0 rotate-0"
           : `${from}`,
         className,
       )}
