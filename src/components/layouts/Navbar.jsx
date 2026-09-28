@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import Container from "../Container";
 import { NavLink } from "react-router";
-import logo from "/src/assets/logo.webp";
+import logo from "/src/assets/logo.png";
 import {
   FaRegCircleUser,
   FaUserGraduate,
@@ -36,14 +36,15 @@ const Navbar = () => {
       <Container>
         <div className="hidden lg:flex justify-between items-center">
           {/* Logo */}
-          <NavLink to={"/"} className="w-35 h-12.5 block">
+          <NavLink to={"/"} className="w-15 h-12.5 flex">
             <img
               src={logo}
-              alt="International Pathway Malaysia"
+              alt="Global Alliance"
               className="w-full h-full"
               loading="lazy"
               decoding="async"
             />
+            <h4 className="font-bold text-2xl leading-5 pt-1 text-primary"><span className="text-secondary">Global</span> Alliance</h4>
           </NavLink>
           {/* Logo */}
 

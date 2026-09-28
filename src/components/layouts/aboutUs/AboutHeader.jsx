@@ -18,13 +18,13 @@ const AboutHeader = () => {
             <div className="md:flex items-center gap-x-2 justify-center">
               <Heading text={"About Our"} className={"text-secondary"} />
               <Heading
-                text={"International Pathway Malaysia"}
+                text={"Global Alliance"}
                 className={"text-primary"}
               />
             </div>
             <PBase
               text={
-                "At International Pathway Malaysia, we're passionate about empowering students to unlock their academic potential. As a leading student consultancy firm, we guide students worldwide towards achieving their educational aspirations - both in Malaysia..."
+                "At Global Alliance, we're passionate about empowering students to unlock their academic potential. As a leading student consultancy firm, we guide students worldwide towards achieving their educational aspirations - both in Malaysia..."
               }
               className={"py-5 text-justify md:text-center"}
             />

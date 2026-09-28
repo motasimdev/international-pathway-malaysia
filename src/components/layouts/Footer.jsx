@@ -1,6 +1,6 @@
 import React from "react";
 import { NavLink } from "react-router";
-import logo from "/src/assets/logo.webp";
+import logo from "/src/assets/logo.png";
 import Container from "../Container";
 import PBase from "../PBase";
 import { FaFacebookF, FaLinkedin } from "react-icons/fa6";
@@ -15,14 +15,15 @@ const Footer = () => {
         <Container>
           <div className="">
             {/* Logo */}
-            <NavLink to={"/"} className="w-35 h-12.5 block mx-auto">
+            <NavLink to={"/"} className="w-15 h-12.5 block mx-auto flex">
               <img
                 src={logo}
-                alt="International Pathway Malaysia"
+                alt="Global Alliance"
                 className="w-full h-full"
                 loading="lazy"
                 decoding="async"
               />
+              <h4 className="font-bold text-2xl leading-5 pt-1 text-primary"><span className="text-secondary">Global</span> Alliance</h4>
             </NavLink>
             {/* Logo */}
 
@@ -123,7 +124,7 @@ const Footer = () => {
         <div className="py-3 bg-secondary w-full text-center">
           <Psm
             text={
-              " ©2026 All Rights Reserved By International Pathway Malaysia"
+              " ©2026 All Rights Reserved By Global Alliance"
             }
             className={"text-white"}
           />

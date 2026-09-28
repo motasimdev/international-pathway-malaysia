@@ -89,12 +89,12 @@ const University = ({ id }) => {
   ];
   return (
     <>
-      <section className="py-5 lg:py-10">
+      <section className="py-5 lg:py-1">
         <Container>
           <div className="p-6 max-w-6xl mx-auto">
             {/* Search & Filter */}
 
-            <div className="flex flex-col md:flex-row md:justify-between md:items-center md:space-x-4 space-y-4 md:space-y-0 mb-6">
+            <div className="flex flex-col md:flex-row md:justify-between md:items-center md:space-x-4 space-y-4 md:space-y-0 mb-6 bg-tertiary p-3">
               {/* ======= search name ======== */}
               <div className="relative  md:w-1/3">
                 <label className="text-gray-500">Search by University</label>
@@ -103,7 +103,7 @@ const University = ({ id }) => {
                   onChange={(e) => handleSearch(e, "name")}
                   type="text"
                   placeholder="Search by university"
-                  className="border border-gray-300 rounded px-4 py-2 w-full focus:outline-none"
+                  className="border border-gray-300 rounded px-4 py-2 w-full focus:outline-none bg-white"
                 />
               </div>
               {/* ======= search name ======== */}
@@ -116,7 +116,7 @@ const University = ({ id }) => {
                   onChange={(e) => handleSearch(e, "course")}
                   type="text"
                   placeholder="Search by course"
-                  className="border border-gray-300 rounded px-4 py-2 w-full focus:outline-none"
+                  className="border border-gray-300 rounded px-4 py-2 w-full focus:outline-none bg-white"
                 />
               </div>
 
